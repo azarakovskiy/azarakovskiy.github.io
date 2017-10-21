@@ -1,0 +1,9 @@
+- name: 'IFMO'
+    start: 2005
+    end: 2011
+    place: Saint Petersburg
+
+- name: 'School'
+    start: 1995
+    end: 2005
+    place: Saint Petersburg
