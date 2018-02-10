@@ -5,18 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script>
-        $(document).ready(function () {
-            $.getJSON('data_cv.wrapper', function (data) {
-                var profile = data['Profile'];
-
-
-            })
-        });
-    </script>
-
+    <title>Alexey Zarakovskiy CV</title>
     <style>
         body {
             width: 100%;
@@ -84,7 +73,15 @@
         }
 
         .block {
-            margin: 2mm 0;
+            margin: 3mm 0;
+        }
+
+        .block.first {
+            margin-top: 0;
+        }
+
+        .block.last {
+            margin-bottom: 0;
         }
 
         .block, .block > div {
@@ -115,20 +112,20 @@
 
         .profile .avatar {
             float: right;
-            width: 27mm;
+            width: 32mm;
 
             height: 21mm;
             position: relative;
         }
 
         .profile .avatar img {
-            width: 21mm;
+            width: 23mm;
             border-radius: 50%;
         }
 
         .profile .languages img {
-            width: 3mm;
-            height: 3mm;
+            width: 4mm;
+            height: 4mm;
             position: absolute;
             right: 0;
         }
@@ -161,8 +158,25 @@
             color: #07a;
         }
 
+        .project-name {
+            text-decoration: underline;
+        }
+
         .wrapper .value {
             color: #222222;
+        }
+
+        ul.value li:before {
+            content: "\2014\a0";
+        }
+
+        ul.value {
+            margin: 0;
+            margin-left: -2mm;
+            list-style: none inside;
+            /*padding-left: 5mm;*/
+            -webkit-padding-start: 0;
+            -moz-padding-start: 0;
         }
 
         .wrapper .comment {
@@ -170,12 +184,12 @@
         }
 
         .wrapper .indent {
-            margin-left: 3mm;
-            padding-right: 3mm;
+            margin-left: 4mm;
+            padding-right: 4mm;
         }
 
         .profile .indent {
-            margin-left: 5mm;
+            margin-left: 6mm;
         }
 
         .wrapper a {
@@ -299,288 +313,288 @@
 
                 <div class="line">}</div>
             </div>
+
+            <div class="block">
+                <div class="line">
+                    <span class="property">Education</span> {
+                </div>
+                <div class="indent">
+                    <div class="line">
+                        B.S. Computer Science 2005 - 2009; M.S. Computer Science 2009 - 2011, Russia
+                    </div>
+                    <div class="line">
+                        Saint Petersburg State University of Informational Technologies
+                    </div>
+                </div>
+                <div class="line">}</div>
+            </div>
+            <div class="block">
+                <div class="line">
+                    <span class="property">Projects &amp; Experience</span> { <span
+                        class="comment">/* sorted descending */</span>
+                </div>
+                <div class="block indent">
+                    <div class="line">
+                        <span class="property project-name">Digital eXperience Accelerator, at SDL, in Amsterdam</span>
+                        {
+                        <span
+                                class="comment">Oct 2015 - now</span>
+                    </div>
+                    <div class="indent">
+                        <div class="line">
+                            <span class="property">Environment</span> {
+                            <span class="value">Java, Spring, Maven, Gradle, Jenkins</span> }
+                        </div>
+
+                        <div class="line">
+                            <span class="property">Description</span> {
+                        </div>
+                        <div class="line indent">
+                        <span class="value">
+                            <i>Open-source</i> API wrapper for the complex content management system.
+                            Intention is to help developers implementing custom applications using the company's main product.
+                            Implemented simultaneously in Java &amp; .NET.
+                        </span>
+                        </div>
+                        <div class="line">}</div>
+
+                        <div class="line">
+                            <span class="property">Responsibilities</span> {
+                        </div>
+                        <div class="line indent">
+                            <ul class="value">
+                                <li>
+                                    Main (out of two) Java developer, I work here in close relation with <i>".NET
+                                    half"</i>
+                                    in order to implement the same API in both technologies.
+                                </li>
+                                <li>Communication with customers and project community</li>
+                                <li>Coaching of a junior Java developer.</li>
+                            </ul>
+                        </div>
+                        <div class="line">}</div>
+
+                        <div class="line">
+                            <span class="property">Code example</span> {
+                            <span class="comment">/* because it is public */</span>
+                        </div>
+                        <div class="line indent">
+                            <div class="line">
+                                <span class="property">Developers API framework</span>: <a href="https://goo.gl/QDfbzt">https://goo.gl/QDfbzt</a>
+                            </div>
+                            <div class="line">
+                                <span class="property">Backend service for the framework</span>: <a
+                                    href="https://goo.gl/KAwicS">https://goo.gl/KAwicS</a>
+                            </div>
+                            <div class="line">
+                                <span class="property">Framework extensions</span>: <a href="https://goo.gl/uGb4JQ">https://goo.gl/uGb4JQ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">}</div>
+                </div>
+
+                <div class="block indent">
+                    <div class="line">
+                        <span class="property project-name">API for Wind Turbines, at EPAM for MeteoGroup, in Poland</span>
+                        { <span
+                            class="comment">May - September 2015</span>
+                    </div>
+                    <div class="indent">
+
+                        <div class="line">
+                            <span class="property">Role</span> {
+                            <span class="value">Java developer</span> }
+                        </div>
+                        <div class="line">
+                            <span class="property">Environment</span> {
+                            <span class="value">Java, Hibernate, Spring, Maven</span> }
+                        </div>
+
+                        <div class="line">
+                            <span class="property">Description</span> {
+                        </div>
+                        <div class="line indent">
+                        <span class="value">
+                            The REST API that converts a weather forecast data to a prediction of productivity
+                            of wind turbines at requested time ranges.
+                        </span>
+                        </div>
+                        <div class="line">}</div>
+
+                    </div>
+                    <div class="line">}</div>
+
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="page">
         <div class="subpage">
+            <div class="block first last">
+                <div class="block first indent">
+                    <div class="line">
+                        <span class="property project-name">Landing Page Builder, at EPAM for PayPal, in Poland and Russia</span>
+                        { <span
+                            class="comment">2014 - 2015</span>
+                    </div>
+                    <div class="indent">
+                        <div class="line">
+                            <span class="property">Environment</span> {
+                            <span class="value">Java, Spring, jQuery, Twitter Bootstrap, MySQL, Hibernate</span> }
+                        </div>
 
-            <div class="line">
-                <span class="property">Projects &amp; Experience</span> { <span class="comment">/* sorted descending */</span>
-            </div>
-            <div class="block indent">
-                <div class="line">
-                    <span class="property">Digital eXperience Accelerator, at SDL, in Amsterdam</span> { <span
-                        class="comment">Oct 2015 - now</span>
-                </div>
-                <div class="indent">
-                    <div class="line">
-                        <span class="property">Environment</span> {
-                        <span class="value">Java 7&amp;8, Spring, Maven, Gradle, Jenkins</span> }
-                    </div>
-                    <div class="line">
-                        <span class="property">Team</span> {
-                        <span class="value">4 Java &amp; .NET devs, 3 QA, 1 tech writer, 1 PO; <i>+community</i></span>
-                        }
-                    </div>
-
-                    <div class="line">
-                        <span class="property">Description</span> {
-                    </div>
-                    <div class="line indent">
+                        <div class="line">
+                            <span class="property">Description</span> {
+                        </div>
+                        <div class="line indent">
                         <span class="value">
-                            <i>Open-source</i> API as a wrapper for the complex content management system. 
-                            Intention is to help developers implementing custom applications using the company's main product.
+                            Drag&amp;drop browser wizard for building full-featured web pages with all user actions tracking.
+                            Wizard doesn't require any technical knowledge from user.
                         </span>
-                    </div>
-                    <div class="line">}</div>
+                        </div>
+                        <div class="line">}</div>
 
-                    <div class="line">
-                        <span class="property">Responsibilities</span> {
-                    </div>
-                    <div class="line indent">
-                        <span class="value">
-                            <ul>
-                                <li>Main (out of two) Java developer, I work here in close relation with <i>".NET half"</i> in order to implement the same API in both technologies.</li>
-                                <li>Due to open-source nature of the project I am in constant communication with out customers and community.</li>
+                        <div class="line">
+                            <span class="property">Responsibilities</span> {
+                        </div>
+                        <div class="line indent">
+                            <ul class="value">
+                                <li>UI and UX development and design, Java REST API for this UI.</li>
+                                <li>Communication with customer &amp; <i>live-prototyping</i> with immediate feedback.
+                                </li>
+                                <li>Coaching of a junior JS/Java developer.</li>
                             </ul>
-                        </span>
-                    </div>
-                    <div class="line">}</div>
-
-                    <div class="line">
-                        <span class="property">Code example</span> { <span class="comment">/* because my code is public */</span>
-                    </div>
-                    <div class="line indent">
-                        <ul>
-                            <li>
-                                <span class="property">Developers API framework</span>: <a href="https://goo.gl/QDfbzt">https://goo.gl/QDfbzt</a>
-                            </li>
-                            <li>
-                                <span class="property">Backend service for the framework</span>: <a href="https://goo.gl/KAwicS">https://goo.gl/KAwicS</a>
-                            </li>
-                            <li>
-                                <span class="property">Framework extensions</span>: <a href="https://goo.gl/uGb4JQ">https://goo.gl/uGb4JQ</a>
-                            </li>
-                        </ul>
+                        </div>
+                        <div class="line">}</div>
                     </div>
                     <div class="line">}</div>
                 </div>
-            </div>
-            
-            <div class="block indent">
-                <div class="line">
-                    <span class="property">API for Wind Turbines, at EPAM for Meteogroup, in Poland</span> { <span
-                        class="comment">May - September 2015</span>
-                </div>
-                <div class="indent">
-                    <div class="line">
-                        <span class="property">Environment</span> {
-                        <span class="value">Java 7, Hibernate, Spring Framework, Maven</span> }
-                    </div>
-                    <div class="line">
-                        <span class="property">Team</span> {
-                        <span class="value">3 distributed (Poland, Germany, The Netherlands) teams each of 3-4 developers, 1 PO and 2-3 analysts</span>
-                        }
-                    </div>
 
+                <div class="block indent">
                     <div class="line">
-                        <span class="property">Description</span> {
+                        <span class="property project-name">Bank PRM System, at EPAM for Yota Bank, in Russia</span>
+                        { <span
+                            class="comment">2012 - 2014</span>
                     </div>
-                    <div class="line indent">
+                    <div class="indent">
+                        <div class="line">
+                            <span class="property">Environment</span> {
+                            <span class="value">Java, Grails, jQuery, Tomcat, Oracle DB, JDBC</span> }
+                        </div>
+
+                        <div class="line">
+                            <span class="property">Description</span> {
+                        </div>
+                        <div class="line indent">
                         <span class="value">
-                            The API that's being now developed provides other companies' services with a weather forecast 
-                            converted to a forecast of productivity of wind turbines. 
-                            It works with different types of data and connects to other systems via REST to collect 
-                            and calculate the precise data for different time ranges.
+                           Online Bank PRM system with access to partners, payments, configuration of other payment systems in Bank environment.
                         </span>
-                    </div>
-                    <div class="line">}</div>
+                        </div>
+                        <div class="line">}</div>
 
-                    <div class="line">
-                        <span class="property">Responsibilities</span> {
-                    </div>
-                    <div class="line indent">
-                        <span class="value">
-                            I participate in the project as a backend java developer, and I am responsible for system maintaining and implementing new features.
-                        </span>
-                    </div>
-                    <div class="line">}</div>
-                </div>
-            </div>
-            
-            <div class="block indent">
-                <div class="line">
-                    <span class="property">Landing Page Builder, at EPAM for PayPal, in Poland and Russia</span> { <span
-                        class="comment">May 2014 - February 2015</span>
-                </div>
-                <div class="indent">
-                    <div class="line">
-                        <span class="property">Environment</span> {
-                        <span class="value">Java 6, Spring, jQuery, Twitter Bootstrap, MySQL, Hibernate</span> }
-                    </div>
-                    <div class="line">
-                        <span class="property">Team</span> {
-                        <span class="value">1 PM, 6 developers, 2 testers and a PayPal team </span>
-                        }
-                    </div>
-
-                    <div class="line">
-                        <span class="property">Description</span> {
-                    </div>
-                    <div class="line indent">
-                        <span class="value">
-                           System for building full-featured web pages with all users’ actions being logged automatically. 
-                            Such pages are being created with a components dragging - and this doesn’t require any technical skill from a user.
-                        </span>
-                    </div>
-                    <div class="line">}</div>
-
-                    <div class="line">
-                        <span class="property">Responsibilities</span> {
-                    </div>
-                    <div class="line indent">
-                        <span class="value">
-                            I mostly develop UI and design UX but I’m writing a lot on a server-side as well. 
-                            I also communicate with the customer to define product vision. 
-                            The system is now being developed and used in production.
-                        </span>
+                        <div class="line">
+                            <span class="property">Responsibilities</span> {
+                        </div>
+                        <div class="line indent">
+                            <ul class="value">
+                                <li>Java Web and UI (Grails) development and prototyping.</li>
+                                <li>Data delivery scripts development using Perl and Bash.</li>
+                            </ul>
+                        </div>
+                        <div class="line">}</div>
                     </div>
                     <div class="line">}</div>
                 </div>
-            </div>
-            
-             <div class="block indent">
-                <div class="line">
-                    <span class="property">Bank Partner Relationship Management System, at EPAM for Yota Bank, in Russia</span> { <span
-                        class="comment">September 2012 - February 2014</span>
-                </div>
-                <div class="indent">
-                    <div class="line">
-                        <span class="property">Environment</span> {
-                        <span class="value">Java 7, Grails 2, jQuery, Tomcat 7, Oracle DB, JDBC</span> }
-                    </div>
-                    <div class="line">
-                        <span class="property">Team</span> {
-                        <span class="value">1 PM, 1 team leader, 2 architects/analysts, 4 developers, 2 testers</span>
-                        }
-                    </div>
 
+                <div class="block indent">
                     <div class="line">
-                        <span class="property">Description</span> {
+                        <span class="property project-name">Content Management System, T3C food retailer, in Russia</span>
+                        {
+                        <span class="comment">2011 - 2012</span>
                     </div>
-                    <div class="line indent">
-                        <span class="value">
-                           System that allows Bank’s operators to manage partners, view payment statistics, configure, store 
-                        and give access to many properties that are used by numerous payment systems in Bank’s environment.
-                        </span>
-                    </div>
-                    <div class="line">}</div>
+                    <div class="indent">
+                        <div class="line">
+                            <span class="property">Environment</span> {
+                            <span class="value">Java, Tomcat, Alfresco ECM, MySQL, Lucene, jQuery, TeamCity</span>
+                            }
+                        </div>
 
-                    <div class="line">
-                        <span class="property">Responsibilities</span> {
-                    </div>
-                    <div class="line indent">
-                        <span class="value">
-                            As a Java Web Developer I was responsible for a web user interface creation and took part in a server-side development. 
-                            Wrote some deployment and data delivery scripts using Perl and Bash. 
-                            Used to design user experience, create prototypes and demonstrate them to customers.
-                        </span>
-                    </div>
-                    <div class="line">}</div>
-                </div>
-            </div>
-            
-            <div class="block indent">
-                <div class="line">
-                    <span class="property">Enterprise Content Management System, T3C food retailer, in Russia</span> { <span
-                        class="comment">June 2011 - September 2012</span>
-                </div>
-                <div class="indent">
-                    <div class="line">
-                        <span class="property">Environment</span> {
-                        <span class="value">Java 6, Tomcat 6, Alfresco ECM, MySQL, Apache Lucene, jQuery, YII, TeamCity</span> }
-                    </div>
-                    <div class="line">
-                        <span class="property">Team</span> {
-                        <span class="value">1 PM, 1 analyst, 3 software developers, 1 tester</span>
-                        }
-                    </div>
-
-                    <div class="line">
-                        <span class="property">Description</span> {
-                    </div>
-                    <div class="line indent">
+                        <div class="line">
+                            <span class="property">Description</span> {
+                        </div>
+                        <div class="line indent">
                         <span class="value">
                            Document management system for the customer with multiple offices all over the country that automates decision-making process.
                         </span>
+                        </div>
+                        <div class="line">}</div>
+
+                        <div class="line">
+                            <span class="property">Responsibilities</span> {
+                        </div>
+                        <div class="line indent">
+                            <ul class="value">
+                                <li>Java Web and UI development and prototyping.</li>
+                                <li>Server-side development including data delivering to UI and Lucene-based search
+                                    engine
+                                </li>
+                                <li>Communication with a customer for requirements gathering and clarification</li>
+                            </ul>
+                        </div>
+                        <div class="line">}</div>
                     </div>
                     <div class="line">}</div>
+                </div>
 
+                <div class="block indent">
                     <div class="line">
-                        <span class="property">Responsibilities</span> {
+                        <span class="property project-name">Web Portals, multiple customers from Russia and the USA</span>
+                        {
+                        <span
+                                class="comment">2009 - 2011</span>
                     </div>
                     <div class="line indent">
+                        <span class="property">Role</span> {
                         <span class="value">
-                            As a Web Developer I was responsible for a UI development and prototyping.
-                            A server-side development included mostly delivering data to UI. 
-                            Communicated with the customer on a regular basis for requirements gathering and clarification
-                            Created a system-specific search engine based on Lucene.
+                            JS &amp; PHP Developer with bigger focus on UI.
                         </span>
-                    </div>
-                    <div class="line">}</div>
-                </div>
-            </div>
- 
-            <div class="block indent">
-                <div class="line">
-                    <span class="property">Web Portals, multiple customers from Russia and the USA</span> { <span
-                        class="comment">2009 - 2011</span>
-                </div>
-                <div class="indent">
-                    <div class="line">
-                        <span class="property">Environment</span> {
-                        <span class="value">PHP 5, Java 6, jQuery, MySQL</span> }
-                    </div>
-                    <div class="line">
-                        <span class="property">Team</span> {
-                        <span class="value">1 PM/analyst, 3 software developers, 1 graphical designer</span>
                         }
                     </div>
-
-                    <div class="line">
-                        <span class="property">Responsibilities</span> {
-                    </div>
-                    <div class="line indent">
-                        <span class="value">
-                            As a Web Developer I was responsible for both server-side and UI development with focus on UI
-                        </span>
+                    <div class="indent">
+                        <div class="line">
+                            <span class="property">Environment</span> {
+                            <span class="value">PHP, Java, jQuery, MySQL</span> }
+                        </div>
                     </div>
                     <div class="line">}</div>
                 </div>
-            </div>
-            
-               <div class="block indent">
-                <div class="line">
-                    <span class="property">Part-time job (70%) while studying</span> { <span
-                        class="comment">2006 - 2009</span>
-                </div>
-                <div class="indent">
-                    <div class="line">
-                        <span class="property">Environment</span> {
-                        <span class="value">C++, C#</span> }
-                    </div>
 
+                <div class="block last indent">
                     <div class="line">
-                        <span class="property">Description</span> {
+                        <span class="property project-name">Part-time job (70%) while studying</span> { <span
+                            class="comment">2006 - 2009</span>
                     </div>
-                    <div class="line indent">
+                    <div class="indent">
+                        <div class="line">
+                            <span class="property">Environment</span> {
+                            <span class="value">C++, C#</span> }
+                        </div>
+
+                        <div class="line">
+                            <span class="property">Description</span> {
+                        </div>
+                        <div class="line indent">
                         <span class="value">
-                            The company specializes in radio interception, analog-to-digital conversion, surveillance and monitoring systems.
+                           Radio interception, analog-to-digital conversion, surveillance and monitoring systems.
                         </span>
+                        </div>
+                        <div class="line">}</div>
                     </div>
                     <div class="line">}</div>
                 </div>
+                <div class="line">}</div>
             </div>
         </div>
     </div>
