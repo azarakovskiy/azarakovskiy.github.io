@@ -133,7 +133,7 @@
             font-family: monaco, Consolas, Menlo, Courier, monospace;
         }
 
-        .wrapper .property {
+        .wrapper .property, .wrapper .property a {
             color: #07a;
         }
 
@@ -178,6 +178,16 @@
             margin: 0;
         }
 
+        @media screen {
+            .page {
+                float: left;
+                margin: 10mm;
+            }
+            #cv-link {
+                display: none;
+            }
+        }
+
         @media print {
             html, body {
                 width: 210mm;
@@ -199,8 +209,21 @@
                 margin-top: 0;
             }
 
+            .page.second {
+                position: relative;
+            }
+
+            #cv-link {
+                position: absolute;
+                bottom: 10mm;
+            }
+
             .profile {
                 border-bottom: 1px solid #777777;
+            }
+
+            .wrapper .comment {
+                color: #b3b3b3;
             }
         }
 
@@ -345,7 +368,7 @@
                 </div>
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">Digital eXperience Accelerator, at SDL, in Amsterdam</span>
+                        <span class="property project-name"><a href=#">Digital eXperience Accelerator, at SDL, in Amsterdam</a></span>
                         {
                         <span
                                 class="comment">Oct 2015 - now</span>
@@ -406,7 +429,7 @@
 
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">API for Wind Turbines, at EPAM for MeteoGroup, in Poland</span>
+                        <span class="property project-name"><a href=#">API for Wind Turbines, at EPAM for MeteoGroup, in Poland</a></span>
                         { <span
                             class="comment">May - September 2015</span>
                     </div>
@@ -440,12 +463,12 @@
         </div>
     </div>
 
-    <div class="page">
+    <div class="page second">
         <div class="subpage">
             <div class="block first last">
                 <div class="block first indent">
                     <div class="line">
-                        <span class="property project-name">Landing Page Builder, at EPAM for PayPal, in Poland and Russia</span>
+                        <span class="property project-name"><a href=#">Landing Page Builder, at EPAM for PayPal, in Poland and Russia</a></span>
                         { <span
                             class="comment">2014 - 2015</span>
                     </div>
@@ -484,7 +507,7 @@
 
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">Bank PRM System, at EPAM for Yota Bank, in Russia</span>
+                        <span class="property project-name"><a href=#">Bank PRM System, at EPAM for Yota Bank, in Russia</a></span>
                         { <span
                             class="comment">2012 - 2014</span>
                     </div>
@@ -520,7 +543,7 @@
 
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">Content Management System, T3C food retailer, in Russia</span>
+                        <span class="property project-name"><a href=#">Content Management System, T3C food retailer, in Russia</a></span>
                         {
                         <span class="comment">2011 - 2012</span>
                     </div>
@@ -560,7 +583,7 @@
 
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">Web Portals, multiple customers from Russia and the USA</span>
+                        <span class="property project-name"><a href=#">Web Portals, multiple customers from Russia and the USA</a></span>
                         {
                         <span
                                 class="comment">2009 - 2011</span>
@@ -583,7 +606,7 @@
 
                 <div class="block last indent">
                     <div class="line">
-                        <span class="property project-name">Part-time job (70%) while studying</span> { <span
+                        <span class="property project-name"><a href=#">Part-time job (70%) while studying</a></span> { <span
                             class="comment">2006 - 2009</span>
                     </div>
                     <div class="indent">
@@ -606,6 +629,8 @@
                 </div>
                 <div class="line">}</div>
             </div>
+
+            <span  id="cv-link" class="comment">// With clickable links: <a href="https://azarakovskiy.github.io/">https://azarakovskiy.github.io</a></span>
         </div>
     </div>
 </div>
