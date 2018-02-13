@@ -1,0 +1,43 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+    }
+
+    .page {
+        margin: 0 auto;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+
+    .page.first {
+        margin-top: 0;
+    }
+
+    .page.second {
+        position: relative;
+    }
+
+    #cv-link {
+        position: absolute;
+        bottom: 10mm;
+    }
+
+    .profile {
+        border-bottom: 1px solid #777777;
+    }
+
+    .wrapper .comment {
+        color: #b3b3b3;
+    }
+}
