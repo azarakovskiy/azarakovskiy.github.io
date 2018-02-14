@@ -215,6 +215,10 @@
                 bottom: 10mm;
             }
 
+            #disclaimer {
+                display: none !important;
+            }
+
             .profile {
                 border-bottom: 1px solid #777777;
             }
@@ -266,6 +270,15 @@
             }
         }
 
+        #disclaimer {
+            width: 100%;
+            text-align: center;
+            display: block;
+            height: 30px;
+            position: absolute;
+            top: 0
+        }
+
     </style>
 </head>
 <body>
@@ -300,8 +313,8 @@
             <a href="tel:+31647214927">+31 647214927</a>
             <a href="https://www.linkedin.com/in/alexeyzarakovskiy">linkedin.com/in/alexeyzarakovskiy</a>
             <a class="mail" href="mailto:alexey.zarakovskiy@gmail.com">alexey.zarakovskiy@gmail.com</a>
-            <a class="button center" href="javascript:window.print()">Save CV as PDF</a>
-            <a class="center" href="/etc/Alexey_Zarakovskiy_CV.pdf">(click if the button doesn't work)</a>
+            <a class="button center" href="/etc/Alexey_Zarakovskiy_CV.pdf">Download CV</a>
+            <a class="center" href="javascript:window.print()">(click here to print)</a>
         </div>
     </div>
     <div id="desktop">
@@ -713,7 +726,14 @@
                 <span id="cv-link" class="comment">// With clickable links: <a href="https://azarakovskiy.github.io/">https://azarakovskiy.github.io</a></span>
             </div>
         </div>
+
+        <span id="disclaimer" class="comment">Optimized for latest Chrome.
+        If something is shown wrong, <a class="button center"
+                                        href="/etc/Alexey_Zarakovskiy_CV.pdf">just download a PDF</a></span>
+
     </div>
+
 </div>
+
 </body>
 </html>
