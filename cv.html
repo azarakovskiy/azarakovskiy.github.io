@@ -31,49 +31,28 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
-        .page {
-            margin: 10mm auto;
-        }
-
-        .page.first {
-            margin: -30mm auto 10mm;
-        }
-
         .page .subpage {
             height: 277mm; /* 297 - 2 *10 */
             outline: 10mm white solid;
             padding: 0;
         }
 
-        .page.first .subpage {
-            padding: 30mm 0 0;
+        .page.first {
+            padding: 0 10mm;
         }
 
-        @page {
-            size: A4;
-            margin: 0;
-        }
-
-        @media print {
-            html, body {
-                width: 210mm;
-                height: 297mm;
-            }
-
-            .page {
-                margin: 0;
-                border: initial;
-                border-radius: initial;
-                width: initial;
-                min-height: initial;
-                box-shadow: initial;
-                background: initial;
-                page-break-after: always;
-            }
+        .page .subpage {
+            outline: 0;
         }
 
         .block {
             margin: 3mm 0;
+        }
+
+        @-moz-document url-prefix() {
+            .block {
+                margin: 2mm 0;
+            }
         }
 
         .block.first {
@@ -91,12 +70,10 @@
         }
 
         .profile {
-            height: 40mm;
+            height: 37mm;
             width: 210mm;
-            margin: 0 auto;
-            position: relative;
-            top: 10mm;
-            padding: 10mm 10mm 0;
+            margin: 0 auto 0 -10mm;
+            padding: 7mm 10mm 0;
             background: rgba(0, 119, 170, 0.1);
         }
 
@@ -112,9 +89,10 @@
 
         .profile .avatar {
             float: right;
-            width: 32mm;
-
-            height: 21mm;
+            width: 34mm;
+            padding-top:3mm;
+            margin-top: -3mm;
+            height: 30mm;
             position: relative;
         }
 
@@ -124,10 +102,11 @@
         }
 
         .profile .languages img {
-            width: 4mm;
-            height: 4mm;
+            width: 5mm;
+            height: 5mm;
             position: absolute;
             right: 0;
+            border:  1px solid rgba(0, 119, 170, 0.3);
         }
 
         .profile .languages img:nth-child(1) {
@@ -135,26 +114,26 @@
         }
 
         .profile .languages img:nth-child(2) {
-            top: 4mm;
+            top: 6mm;
         }
 
         .profile .languages img:nth-child(3) {
-            top: 9mm
+            top: 12mm
         }
 
         .profile .languages img:nth-child(4) {
-            top: 14mm
+            top: 18mm
         }
 
         .profile .languages img:nth-child(5) {
-            top: 18mm;
+            top: 24mm;
         }
 
         .wrapper {
             font-family: monaco, Consolas, Menlo, Courier, monospace;
         }
 
-        .wrapper .property {
+        .wrapper .property, .wrapper .property a {
             color: #07a;
         }
 
@@ -171,10 +150,8 @@
         }
 
         ul.value {
-            margin: 0;
-            margin-left: -2mm;
+            margin: 0 0 0 -2mm;
             list-style: none inside;
-            /*padding-left: 5mm;*/
             -webkit-padding-start: 0;
             -moz-padding-start: 0;
         }
@@ -196,72 +173,128 @@
             color: #222222;
         }
 
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media screen {
+            .page {
+                float: left;
+                margin: 10mm;
+            }
+            #cv-link {
+                display: none;
+            }
+        }
+
+        @media print {
+            html, body {
+                width: 210mm;
+                height: 297mm;
+            }
+
+            .page {
+                margin: 0 auto;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+
+            .page.first {
+                margin-top: 0;
+            }
+
+            .page.second {
+                position: relative;
+            }
+
+            #cv-link {
+                position: absolute;
+                bottom: 10mm;
+            }
+
+            .profile {
+                border-bottom: 1px solid #777777;
+            }
+
+            .wrapper .comment {
+                color: #b3b3b3;
+            }
+        }
+
     </style>
 </head>
 <body>
 <div class="wrapper">
 
-    <div class="profile">
-        <div class="name">
-            <div class="line">
-                <span class="property">Profile</span> {
-            </div>
-            <div class="line indent">
-                <span class="value">Alexey Zarakovskiy</span>
-            </div>
-
-            <div class="line indent">
-                <span class="value">Java Developer</span>
-            </div>
-
-            <div class="line indent">
-                <span class="value">Amsterdam</span>
-            </div>
-
-            <div class="line">}</div>
-        </div>
-        <div class="contacts">
-            <div class="line">
-                <span class="property">Contacts</span> {
-            </div>
-            <div class="line indent">
-                <span class="value">+31 647214927</span>
-            </div>
-            <div class="line indent">
-                <span class="value">
-                    <a class="mail" href="mailto:alexey.zarakovskiy@gmail.com">alexey.zarakovskiy@gmail.com</a>
-                </span>
-            </div>
-
-            <div class="line indent">
-                <span class="value">
-                    <a class="mail" href="https://www.linkedin.com/in/alexeyzarakovskiy">linkedin.com/in/alexeyzarakovskiy</a>
-                </span>
-            </div>
-            <div class="line">}</div>
-        </div>
-
-        <div class="avatar">
-            <a href="https://www.facebook.com/akkuch" title="Facebook is a personal zone, remember it ;)">
-                <img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/17362521_1387391754654223_9023175449471356323_n.jpg?oh=5e6407322ceb724b744de97386e0b809&oe=5AE14B6F"/>
-            </a>
-
-            <div class="languages">
-
-                <img src="img/uk.png" title="I speak English, of course"/>
-                <img src="img/russia.png" title="Русский - мой родной язык"/>
-                <img src="img/nld.png" title="Als het nodig is, is het Nederlands geen probleem."/>
-                <img src="img/spain.png" title="Estudiaba Español por 10 años"/>
-                <img src="img/poland.png" title="Po roku w Polsce mowię również po polsku"/>
-
-            </div>
-        </div>
-
-
-    </div>
 
     <div class="page first">
         <div class="subpage">
+
+            <div class="profile block">
+                <div class="name">
+                    <div class="line">
+                        <span class="property">Profile</span> {
+                    </div>
+                    <div class="line indent">
+                        <span class="value">Alexey Zarakovskiy</span>
+                    </div>
+
+                    <div class="line indent">
+                        <span class="value">Java Developer</span>
+                    </div>
+
+                    <div class="line indent">
+                        <span class="value">Amsterdam</span>
+                    </div>
+
+                    <div class="line">}</div>
+                </div>
+                <div class="contacts">
+                    <div class="line">
+                        <span class="property">Contacts</span> {
+                    </div>
+                    <div class="line indent">
+                        <span class="value">+31 647214927</span>
+                    </div>
+                    <div class="line indent">
+                <span class="value">
+                    <a class="mail" href="mailto:alexey.zarakovskiy@gmail.com">alexey.zarakovskiy@gmail.com</a>
+                </span>
+                    </div>
+
+                    <div class="line indent">
+                <span class="value">
+                    <a class="mail" href="https://www.linkedin.com/in/alexeyzarakovskiy">linkedin.com/in/alexeyzarakovskiy</a>
+                </span>
+                    </div>
+                    <div class="line">}</div>
+                </div>
+
+                <div class="avatar">
+                    <a href="https://www.facebook.com/akkuch" title="Facebook is a personal zone, remember it ;)">
+                        <img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/17362521_1387391754654223_9023175449471356323_n.jpg?oh=5e6407322ceb724b744de97386e0b809&oe=5AE14B6F"/>
+                    </a>
+
+                    <div class="languages">
+
+                        <img src="img/uk.png" title="I speak English, of course" alt="ENG"/>
+                        <img src="img/russia.png" title="Русский - мой родной язык" alt="RUS"/>
+                        <img src="img/nld.png" title="Als het nodig is, is het Nederlands geen probleem." alt="NLD"/>
+                        <img src="img/spain.png" title="Estudiaba Español por 10 años" alt="ESP"/>
+                        <img src="img/poland.png" title="Po roku w Polsce mowię również po polsku" alt="POL"/>
+
+                    </div>
+                </div>
+
+
+            </div>
+
 
             <div class="block">
                 <div class="line">
@@ -335,7 +368,7 @@
                 </div>
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">Digital eXperience Accelerator, at SDL, in Amsterdam</span>
+                        <span class="property project-name"><a href=#">Digital eXperience Accelerator, at SDL, in Amsterdam</a></span>
                         {
                         <span
                                 class="comment">Oct 2015 - now</span>
@@ -396,7 +429,7 @@
 
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">API for Wind Turbines, at EPAM for MeteoGroup, in Poland</span>
+                        <span class="property project-name"><a href=#">API for Wind Turbines, at EPAM for MeteoGroup, in Poland</a></span>
                         { <span
                             class="comment">May - September 2015</span>
                     </div>
@@ -430,12 +463,12 @@
         </div>
     </div>
 
-    <div class="page">
+    <div class="page second">
         <div class="subpage">
             <div class="block first last">
                 <div class="block first indent">
                     <div class="line">
-                        <span class="property project-name">Landing Page Builder, at EPAM for PayPal, in Poland and Russia</span>
+                        <span class="property project-name"><a href=#">Landing Page Builder, at EPAM for PayPal, in Poland and Russia</a></span>
                         { <span
                             class="comment">2014 - 2015</span>
                     </div>
@@ -474,7 +507,7 @@
 
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">Bank PRM System, at EPAM for Yota Bank, in Russia</span>
+                        <span class="property project-name"><a href=#">Bank PRM System, at EPAM for Yota Bank, in Russia</a></span>
                         { <span
                             class="comment">2012 - 2014</span>
                     </div>
@@ -510,7 +543,7 @@
 
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">Content Management System, T3C food retailer, in Russia</span>
+                        <span class="property project-name"><a href=#">Content Management System, T3C food retailer, in Russia</a></span>
                         {
                         <span class="comment">2011 - 2012</span>
                     </div>
@@ -550,7 +583,7 @@
 
                 <div class="block indent">
                     <div class="line">
-                        <span class="property project-name">Web Portals, multiple customers from Russia and the USA</span>
+                        <span class="property project-name"><a href=#">Web Portals, multiple customers from Russia and the USA</a></span>
                         {
                         <span
                                 class="comment">2009 - 2011</span>
@@ -573,7 +606,7 @@
 
                 <div class="block last indent">
                     <div class="line">
-                        <span class="property project-name">Part-time job (70%) while studying</span> { <span
+                        <span class="property project-name"><a href=#">Part-time job (70%) while studying</a></span> { <span
                             class="comment">2006 - 2009</span>
                     </div>
                     <div class="indent">
@@ -596,6 +629,8 @@
                 </div>
                 <div class="line">}</div>
             </div>
+
+            <span  id="cv-link" class="comment">// With clickable links: <a href="https://azarakovskiy.github.io/">https://azarakovskiy.github.io</a></span>
         </div>
     </div>
 </div>
