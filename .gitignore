@@ -7,6 +7,8 @@ _site/
 # IntelliJ project files
 .idea
 *.iml
+*.ipr
+*.iws
 out
 gen### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
