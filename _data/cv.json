@@ -1,0 +1,329 @@
+{
+  "basics": {
+    "name": "Alexey Zarakovskiy",
+    "label": "Java developer",
+    "image": "/img/avatar.jpg",
+    "preview_img": {
+      "url": "/img/image_preview.jpg",
+      "width": 968,
+      "height": 504
+    },
+    "email": "<script>document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+\"'\"+'&'+'#'+'1'+'0'+'9'+';'+'&'+'#'+'9'+'7'+';'+'i'+'l'+'&'+'#'+'1'+\n'1'+'6'+';'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'5'+'8'+';'+'&'+'#'+'1'+'1'+'9'+';'+'&'+'#'+'1'+'1'+'1'+\n';'+'r'+'k'+'&'+'#'+'6'+'4'+';'+'a'+'z'+'a'+'%'+'7'+'2'+'%'+'6'+'1'+'k'+'o'+'&'+'#'+'1'+'1'+'8'+';'+\n's'+'&'+'#'+'1'+'0'+'7'+';'+'&'+'#'+'1'+'0'+'5'+';'+'&'+'#'+'3'+'7'+';'+'7'+'9'+'&'+'#'+'4'+'6'+';'+\n'c'+'&'+'#'+'1'+'1'+'1'+';'+'m'+\"'\"+'>'+'w'+'o'+'r'+'&'+'#'+'1'+'0'+'7'+';'+'&'+'#'+'6'+'4'+';'+'a'+\n'z'+'a'+'r'+'a'+'k'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+'8'+';'+'s'+'k'+'&'+'#'+'1'+'0'+'5'+';'+\n'y'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'9'+'9'+';'+'o'+'m'+'<'+'/'+'a'+'>');</script><noscript>[Turn on JavaScript to see the email address]</noscript>",
+    "phone": "<script>document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+\"'\"+'t'+'e'+'l'+'&'+'#'+'5'+'8'+';'+\n'&'+'#'+'4'+'3'+';'+'3'+'&'+'#'+'4'+'9'+';'+'%'+'2'+'0'+'6'+'4'+'7'+'&'+'#'+'3'+'2'+';'+'2'+'1'+' '+\n'&'+'#'+'3'+'7'+';'+'&'+'#'+'5'+'1'+';'+'4'+'&'+'#'+'3'+'7'+';'+'3'+'&'+'#'+'5'+'7'+';'+'%'+'2'+'0'+\n'%'+'3'+'2'+'7'+\"'\"+'>'+'+'+'3'+'1'+' '+'6'+'&'+'#'+'5'+'2'+';'+'&'+'#'+'5'+'5'+';'+' '+'&'+'#'+'5'+\n'0'+';'+'&'+'#'+'4'+'9'+';'+'&'+'#'+'3'+'2'+';'+'4'+'9'+' '+'2'+'7'+'<'+'/'+'a'+'>');</script><noscript>[Turn on JavaScript to see the phone number]</noscript>",
+    "url": "http://azarakovskiy.com",
+    "pdf_url": "/etc/Alexey_Zarakovskiy_CV.pdf",
+    "summary": {
+      "plain_text": "I am an experienced Java developer who is mostly focused on the backend but with a strong frontend background in the past. Open to challenges and new technologies and have a nothing-is-impossible-if-legal mindset.",
+      "html": "I am an experienced Java developer who is mostly focused on the backend but with a strong frontend background in the past. Open to challenges and new technologies and have a <i>nothing-is-impossible</i> mindset."
+    },
+    "summary_short": {
+      "plain_text": "Experienced Java Developer, with JS background, work experience since 2006, Java since 2011. Check out my CV!"
+    },
+    "location": {
+      "city": "Amsterdam",
+      "country": "The Netherlands",
+      "countryCode": "NL"
+    },
+    "profiles": {
+      "LinkedIn": {
+        "network": "LinkedIn",
+        "url": {
+          "alias": "linkedin.com/in/alexeyzarakovskiy",
+          "src": "https://www.linkedin.com/in/alexeyzarakovskiy"
+        }
+      },
+      "Facebook": {
+        "network": "Facebook",
+        "url": {
+          "alias": "https://www.facebook.com/akkuch",
+          "src": "https://www.facebook.com/akkuch"
+        }
+      }
+    }
+  },
+  "education": [
+    {
+      "institution": "State University of Informational Technologies",
+      "area": "Computer Science",
+      "studyType": "B.S. - M.S.",
+      "startDate": "2005",
+      "endDate": "2011",
+      "location": {
+        "city": "Saint Petersburg",
+        "country": "Russia",
+        "countryCode": "RU"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "Java",
+      "keywords": [
+        "Spring",
+        "Groovy",
+        "Grails",
+        "Tomcat"
+      ]
+    },
+    {
+      "name": "Testing",
+      "keywords": [
+        "jUnit",
+        "EasyMock",
+        "Mockito",
+        "JMeter",
+        "Postman"
+      ]
+    },
+    {
+      "name": "Builds",
+      "keywords": [
+        "Maven",
+        "Gradle",
+        "Git",
+        "Docker",
+        "SVN",
+        "Jenkins",
+        "TeamCity"
+      ]
+    },
+    {
+      "name": "Web",
+      "keywords": [
+        "HTML",
+        "JS",
+        "jQuery",
+        "CSS",
+        "Twitter Bootstrap",
+        "AngularJS"
+      ]
+    },
+    {
+      "name": "DBs",
+      "keywords": [
+        "Oracle",
+        "MySQL",
+        "JDBC",
+        "Hibernate"
+      ]
+    },
+    {
+      "name": "Other",
+      "keywords": [
+        "PowerShell",
+        "PHP",
+        "C#",
+        "Jira",
+        "Windows",
+        "Linux",
+        "UX",
+        "UML"
+      ]
+    },
+    {
+      "name": "Methodologies",
+      "keywords": [
+        "Scrum",
+        "Kanban",
+        "SAFe",
+        "RUP"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "countryCode": "UK",
+      "comment": "I speak English, of course",
+      "fluency": "4/5"
+    },
+    {
+      "language": "Russian",
+      "countryCode": "RU",
+      "comment": "Русский - мой родной язык",
+      "fluency": "5/5"
+    },
+    {
+      "language": "Dutch",
+      "countryCode": "NL",
+      "comment": "Als het nodig is, is het Nederlands geen probleem.",
+      "fluency": "3/5"
+    },
+    {
+      "language": "Polish",
+      "countryCode": "PL",
+      "comment": "Po roku w Polsce mowię również po polsku",
+      "fluency": "2/5"
+    },
+    {
+      "language": "Spanish",
+      "countryCode": "ES",
+      "comment": "Estudiaba Español por 10 años",
+      "fluency": "2/5"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Digital eXperience Accelerator",
+      "location": {
+        "city": "Amsterdam",
+        "country": "The Netherlands",
+        "countryCode": "NL"
+      },
+      "employer": "SDL",
+      "roles": [
+        "Java developer"
+      ],
+      "description": "An open-source API wrapper for the complex enterprise CMS. The intention was to help developers building custom applications using the company's main product. Implemented in Java & .NET.",
+      "highlights": [
+        "As a main Java developer, I work here in close relation with \".NET half\" in order to implement the same API in both technologies",
+        "Communication with customers and project community",
+        "Coach a junior Java developer"
+      ],
+      "keywords": [
+        "Java",
+        "Spring",
+        "Maven",
+        "Gradle",
+        "Jenkins"
+      ],
+      "startDate": "2015",
+      "endDate": "2018",
+      "url": "https://www.sdl.com/download/data-sheet-sdl-tridion-sites-dxa/111563/"
+    },
+    {
+      "name": "API for wind turbines",
+      "location": {
+        "city": "Krakow",
+        "country": "Poland",
+        "countryCode": "PL"
+      },
+      "employer": "EPAM for MeteoGroup",
+      "roles": [
+        "Java developer"
+      ],
+      "description": "The REST API that converts a weather forecast data to a prediction of productivity of wind turbines at requested time ranges.",
+      "keywords": [
+        "Java",
+        "Hibernate",
+        "Maven",
+        "Spring"
+      ],
+      "startDate": "summer 2015",
+      "endDate": "summer 2015",
+      "url": "https://www.meteogroup.com/"
+    },
+    {
+      "name": "Landing Page Builder",
+      "location": {
+        "city": "Krakow",
+        "country": "Poland",
+        "countryCode": "PL"
+      },
+      "employer": "EPAM for PayPal",
+      "roles": [
+        "Full-stack JS/Java developer"
+      ],
+      "description": "Drag&drop browser wizard to build full-featured web pages with user actions tracking which doesn't require any technical knowledge.",
+      "keywords": [
+        "Java",
+        "Spring",
+        "jQuery",
+        "Twitter Bootstrap",
+        "SQL",
+        "Hibernate"
+      ],
+      "highlights": [
+        "UI and UX development and design, Java REST API for this UI",
+        "Communication with customer & live-prototyping",
+        "Coaching of a junior JS/Java developer"
+      ],
+      "startDate": "2014",
+      "endDate": "2015",
+      "url": "https://advertising.paypal.com/"
+    },
+    {
+      "name": "Yota Bank CRM System",
+      "location": {
+        "city": "Saint Petersburg",
+        "country": "Russia",
+        "countryCode": "RU"
+      },
+      "employer": "EPAM for Yota",
+      "roles": [
+        "Full-stack JS/Java developer"
+      ],
+      "description": "CRM system for an online bank with access to partners, payments, configuration of other payment systems in a bank environment.",
+      "keywords": [
+        "Java",
+        "Grails",
+        "jQuery",
+        "Tomcat",
+        "Oracle DB",
+        "JDBC"
+      ],
+      "highlights": [
+        "Java Web and UI (Grails) development and prototyping",
+        "Data delivery scripts development using Perl and Bash"
+      ],
+      "startDate": "2012",
+      "endDate": "2014",
+      "url": "https://www.yota.ru/"
+    },
+    {
+      "name": "Content Management System",
+      "location": {
+        "city": "Saint Petersburg",
+        "country": "Russia",
+        "countryCode": "RU"
+      },
+      "employer": "T3C retailer",
+      "roles": [
+        "Full-stack JS/Java developer"
+      ],
+      "description": "Document management system for the customer with multiple offices all over the country that automates decision-making process.",
+      "keywords": [
+        "Java",
+        "Tomcat",
+        "Alfresco",
+        "MySQL",
+        "Lucene",
+        "jQuery",
+        "TeamCity"
+      ],
+      "highlights": [
+        "Java Web and backend and frontend development and prototyping",
+        "Custom search engine based on Lucene"
+      ],
+      "startDate": "2011",
+      "endDate": "2012",
+      "url": "http://russretail.info/busines/200-o-tzs.html"
+    },
+    {
+      "name": "Misc web development",
+      "employer": "Russian and American customers",
+      "roles": [
+        "JS & PHP Developer with bigger focus on UI"
+      ],
+      "keywords": [
+        "PHP",
+        "Java",
+        "jQuery",
+        "MySQL"
+      ],
+      "startDate": "2009",
+      "endDate": "2011"
+    },
+    {
+      "name": "Part-time job (70%) while studying",
+      "roles": [
+        "C++ & C# developer",
+        "QA engineer"
+      ],
+      "description": "Radio interception, surveillance and monitoring systems.",
+      "startDate": "2006",
+      "endDate": "2009",
+      "url": "http://zavodenergy.ru"
+    }
+  ]
+}

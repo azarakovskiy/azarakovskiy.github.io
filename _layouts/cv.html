@@ -15,22 +15,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:title" content="Alexey Zarakovskiy CV"/>
-    <meta property="og:site_name" content="Alexey Zarakovskiy CV">
+    <meta property="og:title" content="{{site.data.cv.basics.name}} CV, {{site.data.cv.basics.label}}"/>
+    <meta property="og:site_name" content="{{site.data.cv.basics.name}} CV, {{site.data.cv.basics.label}}">
     <meta property="og:type" content="profile"/>
-    <meta property="og:url" content="http://azarakovskiy.com/"/>
-    <meta property="og:description"
-          content="Experienced Java Developer since 2011, with JS background, work experience since 2006. Check out my CV :)"/>
+    <meta property="og:url" content="{{site.data.cv.basics.url}}}}"/>
+    <meta property="og:description" content="{{site.data.cv.basics.summary_short.plain_text}}"/>
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://image.prntscr.com/image/L37KaISpTO6GY4s4BNhM4g.png"/>
-    <meta property="og:image:width" content="968">
-    <meta property="og:image:height" content="504">
+    <meta property="og:image" content="{{ site.data.cv.basics.preview_img.url | absolute_url }}"/>
+    <meta property="og:image:width" content="{{ site.data.cv.basics.preview_img.width }}">
+    <meta property="og:image:height" content="{{ site.data.cv.basics.preview_img.height }}">
 
-    <meta name="twitter:card" content="https://image.prntscr.com/image/L37KaISpTO6GY4s4BNhM4g.png">
-    <meta name="twitter:title" content="Alexey Zarakovskiy CV">
-    <meta name="twitter:description" content="Experienced Java Developer since 2011, with JS background, work experience since 2006. Check out my CV :)">
-    <meta name="twitter:image:src" content="https://image.prntscr.com/image/L37KaISpTO6GY4s4BNhM4g.png">
-    <meta name="twitter:url" content="http://azarakovskiy.com/">
+    <meta name="twitter:card" content="{{ site.data.cv.basics.preview_img.url | absolute_url }}">
+    <meta name="twitter:title" content="{{site.data.cv.basics.name}} CV, {{site.data.cv.basics.label}}">
+    <meta name="twitter:description" content="{{site.data.cv.basics.summary_short.plain_text}}">
+    <meta name="twitter:image:src" content="{{ site.data.cv.basics.preview_img.url | absolute_url }}">
+    <meta name="twitter:url" content="{{site.data.cv.basics.url}}">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
@@ -41,7 +40,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -50,7 +49,7 @@
     <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>{{ page.title }}</title>
+    <title>{{site.data.cv.basics.name}} CV</title>
     <style>
         body {
             width: 100%;
@@ -257,6 +256,7 @@
 
             .page.second {
                 position: relative;
+                padding-bottom: 0;
             }
 
             #cv-link {
@@ -335,32 +335,27 @@
 
     <div id="mobile">
         <div class="profile">
-            <h1>Alexey Zarakovskiy</h1>
+            <h1>{{site.data.cv.basics.name}}</h1>
             <div class="avatar">
-                <img src="/img/avatar.jpg"/>
+                <img src="{{site.data.cv.basics.image}}"/>
 
                 <div class="languages">
 
-                    <img src="../img/uk.png" title="I speak English, of course" alt="ENG"/>
-                    <img src="../img/russia.png" title="Русский - мой родной язык" alt="RUS"/>
-                    <img src="../img/nld.png" title="Als het nodig is, is het Nederlands geen probleem."
-                         alt="NLD"/>
-                    <img src="../img/spain.png" title="Estudiaba Español por 10 años" alt="ESP"/>
-                    <img src="../img/poland.png" title="Po roku w Polsce mowię również po polsku" alt="POL"/>
+                    {% for language in site.data.cv.languages%}
+                    <img src="../img/{{language.countryCode}}.png" title="{{language.comment}}" alt="{{language.language}}"/>
+                    {% endfor %}
 
                 </div>
             </div>
 
-            <h2>Java Developer</h2>
-            <p>
-                I am experienced Java developer who is mostly focused on backend but with a strong frontend
-                development background in the past. I am open to challenges and new technologies and have a <i>nothing-is-impossible-if-legal</i>
-                mindset.
-            </p>
-            <a href="tel:+31647214927">+31 647214927</a>
-            <a href="https://www.linkedin.com/in/alexeyzarakovskiy">linkedin.com/in/alexeyzarakovskiy</a>
-            <a class="mail" href="mailto:alexey.zarakovskiy+cv@gmail.com">alexey.zarakovskiy&commat;gmail.com</a>
-            <a class="button center" href="/etc/Alexey_Zarakovskiy_CV.pdf">Download CV</a>
+            <h2>{{site.data.cv.basics.label}}</h2>
+            <p>{{site.data.cv.basics.summary.html}}</p>
+            {{site.data.cv.basics.phone}}
+            <a href="{{site.data.cv.basics.profiles.LinkedIn.url.src}}">{{site.data.cv.basics.profiles.LinkedIn.url.alias}}</a>
+            {{site.data.cv.basics.email}}
+            <a class="button center" href="{{ site.data.cv.basics.pdf_url }}">Download CV</a>
+
+            <span class="comment center"><i>Full online version is also shown browsing from a desktop.</i></span>
 
         </div>
     </div>
@@ -375,15 +370,15 @@
                             <span class="property">Profile</span> {
                         </div>
                         <div class="line indent">
-                            <span class="value">Alexey Zarakovskiy</span>
+                            <span class="value">{{site.data.cv.basics.name}}</span>
                         </div>
 
                         <div class="line indent">
-                            <span class="value">Java Developer</span>
+                            <span class="value">{{site.data.cv.basics.label}}</span>
                         </div>
 
                         <div class="line indent">
-                            <span class="value">Amsterdam</span>
+                            <span class="value">{{site.data.cv.basics.location.city}}</span>
                         </div>
 
                         <div class="line">}</div>
@@ -394,35 +389,32 @@
                             <span class="property">Contacts</span> {
                         </div>
                         <div class="line indent">
-                            <span class="value">&lt;here was a phone number/&gt;</span>
+                            <span class="value">{{site.data.cv.basics.phone}}</span>
                         </div>
                         <div class="line indent">
-                <span class="value">
-                    <a class="mail">&lt;here was an e-mail address/&gt;</a>
-                </span>
+                            <span class="value">
+                                {{site.data.cv.basics.email}}
+                            </span>
                         </div>
 
                         <div class="line indent">
-                <span class="value">
-                    <a href="https://www.linkedin.com/in/alexeyzarakovskiy">linkedin.com/in/alexeyzarakovskiy</a>
-                </span>
+                            <span class="value">
+                                <a href="{{site.data.cv.basics.profiles.LinkedIn.url.src}}">{{site.data.cv.basics.profiles.LinkedIn.url.alias}}</a>
+                            </span>
                         </div>
                         <div class="line">}</div>
                     </div>
 
                     <div class="avatar">
-                        <a href="https://www.facebook.com/akkuch" title="Facebook is a personal zone, remember it ;)">
- 							<img src="/img/avatar.jpg"/>
+                        <a href="{{site.data.cv.basics.profiles.Facebook.url.src}}" title="Facebook is a personal zone, remember it ;)">
+                            <img src="{{site.data.cv.basics.image}}"/>
                         </a>
 
                         <div class="languages">
 
-                            <img src="../img/uk.png" title="I speak English, of course" alt="ENG"/>
-                            <img src="../img/russia.png" title="Русский - мой родной язык" alt="RUS"/>
-                            <img src="../img/nld.png" title="Als het nodig is, is het Nederlands geen probleem."
-                                 alt="NLD"/>
-                            <img src="../img/spain.png" title="Estudiaba Español por 10 años" alt="ESP"/>
-                            <img src="../img/poland.png" title="Po roku w Polsce mowię również po polsku" alt="POL"/>
+                            {% for language in site.data.cv.languages%}
+                            <img src="../img/{{language.countryCode}}.png" title="{{language.comment}}" alt="{{language.language}}"/>
+                            {% endfor %}
 
                         </div>
                     </div>
@@ -434,8 +426,7 @@
                     </div>
                     <div class="line indent">
                     <span class="value statement">
-                        I am experienced Java developer who is mostly focused on backend but with a strong frontend
-                        development background in the past. I am open to challenges and new technologies and have a <i>nothing-is-impossible-if-legal</i> mindset.
+                        {{site.data.cv.basics.summary.html}}
                     </span>
                     </div>
                     <div class="line">}</div>
@@ -443,37 +434,15 @@
 
                 <div class="skills block">
                     <div class="line">
-                        <span class="property">Skills</span> { <span class="comment">/* please ask if something you need is missing */</span>
+                        <span class="property">Skills</span> { <span class="comment">/* anything missing? ask me! */</span>
                     </div>
                     <div class="indent">
+                        {% for skill in site.data.cv.skills%}
                         <div class="line">
-                            <span class="property">Java</span> {
-                            <span class="value">Spring, Groovy, Grails, Tomcat</span> }
+                            <span class="property">{{skill.name}}</span> {
+                            <span class="value">{{skill.keywords | join: ', '}}</span> }
                         </div>
-                        <div class="line">
-                            <span class="property">Testing</span> {
-                            <span class="value">jUnit, EasyMock, Mockito, JMeter, Postman</span> }
-                        </div>
-                        <div class="line">
-                            <span class="property">Builds</span> {
-                            <span class="value">Maven, Gradle, Git, Docker, SVN, Jenkins, TeamCity</span> }
-                        </div>
-                        <div class="line">
-                            <span class="property">Web</span> {
-                            <span class="value"> HTML, JS, jQuery, CSS, Twitter Bootstrap, AngularJS</span> }
-                        </div>
-                        <div class="line">
-                            <span class="property">DBs</span> {
-                            <span class="value">Oracle, MySQL, JDBC, Hibernate</span> }
-                        </div>
-                        <div class="line">
-                            <span class="property">Other</span> {
-                            <span class="value">PowerShell, PHP, C#, Jira, Windows, Linux, UX, UML</span> }
-                        </div>
-                        <div class="line">
-                            <span class="property">Methodologies</span> {
-                            <span class="value">Scrum, Kanban, SAFe, RUP</span> }
-                        </div>
+                        {% endfor %}
                     </div>
                     <div class="line">}</div>
                 </div>
@@ -482,324 +451,110 @@
                     <div class="line">
                         <span class="property">Education</span> {
                     </div>
+                    {% for education in site.data.cv.education %}
                     <div class="indent">
                         <div class="line value">
-                            B.S. - M.S. Computer Science 2005 - 2009 - 2011, Russia
+                            {{education.studyType}}
+                            {{education.startDate}} - {{education.endDate}},
+                            {{education.location.city}}, {{education.location.country}}
                         </div>
                         <div class="line value">
-                            Saint Petersburg State University of Informational Technologies
+                            {{education.area}}, {{education.institution}}
                         </div>
                     </div>
+                    {% endfor %}
                     <div class="line">}</div>
                 </div>
 
                 <div class="projects block">
                     <div class="line">
                         <span class="property">Projects &amp; Experience</span> {
-                        <span class="comment">/* work since 2006, Java since 2011, sorted descending */</span>
+                        <span class="comment">/* work since 2006, Java since 2011 */</span>
                     </div>
 
-                    <div class="project-dxa block indent">
+                    {% for project in site.data.cv.projects %}
+                    <div class="block indent">
                         <div class="line">
                             <span class="property project-name">
-                                <a target="_blank"
-                                   href="https://www.sdl.com/download/data-sheet-sdl-tridion-sites-dxa/111563/">
-                                    Digital eXperience Accelerator, at SDL, in Amsterdam
-                                </a>
-                            </span> {
-                            <span class="comment">Oct 2015 - now</span>
+                                {% if project.url | size > 0 %}
+                                    <a target="_blank" href="{{project.url}}">{{project.name}}</a>
+                                {% else %}
+                                    {{project.name}}
+                                {% endif %}
+                                  {% if project.employer || project.location %}
+
+                                    <span class="comment">/*
+                                    {% if project.employer %}
+                                        {{project.employer}}
+                                    {% endif %}
+                                    {% if project.location %}
+                                        in {{project.location.country}}
+                                    {% endif %}
+                                    */</span>
+                                {% endif %}
+                                </span> {
+                            <span class="comment">{{project.startDate}}
+                                {% if project.startDate != project.endDate %}- {{project.endDate}}{% endif %}</span>
                         </div>
                         <div class="indent">
                             <div class="line">
-                                <span class="property">Role</span> {
-                                <span class="value">Java developer</span> }
+                                <span class="property">Roles</span> {
+                                <span class="value">{{project.roles | join: ', '}}</span> }
                             </div>
 
+                            {% if project.keywords | size > 0 %}
                             <div class="line">
                                 <span class="property">Environment</span> {
-                                <span class="value">Java, Spring, Maven, Gradle, Jenkins</span> }
+                                <span class="value">{{project.keywords | join: ', '}}</span> }
                             </div>
+                            {% endif %}
 
+                            {% if project.description | size > 0 %}
                             <div class="line">
                                 <span class="property">Project description</span> {
                             </div>
                             <div class="line indent value">
-                                <i>Open-source</i> API wrapper for the complex content management system.
-                                Intention is to help developers implementing custom applications using the company's
-                                main
-                                product.
-                                Implemented simultaneously in Java &amp; .NET.
+                                {{project.description}}
                             </div>
                             <div class="line">}</div>
+                            {% endif %}
 
+                            {% if project.highlights | size > 0 %}
                             <div class="line">
                                 <span class="property">Responsibilities</span> {
                             </div>
-                            <div class="line indent">
+                            <div class="line indent value">
                                 <ul class="value">
-                                    <li>As a main Java developer, I work here in close relation with <i>".NET
-                                        half"</i>
-                                        in order to implement the same API in both technologies
-                                    </li>
-                                    <li>Communication with customers and project community</li>
-                                    <li>Coach a junior Java developer</li>
+                                    {% for highlight in project.highlights %}
+                                    <li>{{highlight}}</li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                             <div class="line">}</div>
-
-                            <div class="line">
-                                <span class="property">Code example</span> {
-                                <span class="comment">/* because it is public */</span>
-                            </div>
-                            <div class="line indent">
-                                <div class="line">
-                                    <span class="property">Developers API framework</span> {
-                                    <a href="https://goo.gl/QDfbzt">https://goo.gl/QDfbzt</a> }
-                                </div>
-                                <div class="line">
-                                    <span class="property">Backend service for the framework</span> {
-                                    <a href="https://goo.gl/KAwicS">https://goo.gl/KAwicS</a> }
-                                </div>
-                                <div class="line">
-                                    <span class="property">Framework extensions</span> {
-                                    <a href="https://goo.gl/uGb4JQ">https://goo.gl/uGb4JQ</a> }
-                                </div>
-                            </div>
-                            <div class="line">}</div>
+                            {% endif %}
                         </div>
                         <div class="line">}</div>
-                    </div>
-
-                    <div class="projects-mg block indent">
-                        <div class="line">
-                            <span class="property project-name">
-                                <a target="_blank" href="https://www.meteogroup.com/">API for wind turbines, at EPAM for MeteoGroup, in Poland</a>
-                            </span> {
-                            <span class="comment">May - September 2015</span>
                         </div>
-                        <div class="indent">
-                            <div class="line">
-                                <span class="property">Role</span> {
-                                <span class="value">Java developer</span> }
-                            </div>
 
-                            <div class="line">
-                                <span class="property">Environment</span> {
-                                <span class="value">Java, Hibernate, Spring, Maven</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Project description</span> {
-                            </div>
-                            <div class="line indent value">
-                                The REST API that converts a weather forecast data to a prediction of productivity
-                                of wind turbines at requested time ranges.
-                            </div>
-                            <div class="line">}</div>
-                        </div>
-                        <div class="line">}</div>
-                    </div>
-
-                    <!-- closing } is on the second page -->
+                    {% if forloop.index == 2 %}
                 </div>
             </div>
         </div>
 
         <div class="page second">
             <div class="subpage">
-                <div class="projects"> <!--block first last-->
-                    <div class="projects-pp block first indent"> <!--first-->
-                        <div class="line">
-                            <span class="property project-name">
-                                <a target="_blank" href="https://advertising.paypal.com/">Landing Page Builder, at EPAM for PayPal, in Poland and Russia</a>
-                            </span> {
-                            <span class="comment">2014 - 2015</span>
-                        </div>
-                        <div class="indent">
-                            <div class="line">
-                                <span class="property">Role</span> {
-                                <span class="value">JS/Java developer</span> }
-                            </div>
+                <div class="projects">
+                    {% endif %}
 
-                            <div class="line">
-                                <span class="property">Environment</span> {
-                                <span class="value">Java, Spring, jQuery, Twitter Bootstrap, MySQL, Hibernate</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Project description</span> {
-                            </div>
-                            <div class="line indent value">
-                                Drag&amp;drop browser wizard to build full-featured web pages with user actions
-                                tracking which doesn't require any technical knowledge.
-                            </div>
-                            <div class="line">}</div>
-
-                            <div class="line">
-                                <span class="property">Responsibilities</span> {
-                            </div>
-                            <div class="line indent">
-                                <ul class="value">
-                                    <li>UI and UX development and design, Java REST API for this UI</li>
-                                    <li>Communication with customer &amp; <i>live-prototyping</i> with immediate
-                                        feedback
-                                    </li>
-                                    <li>Coaching of a junior JS/Java developer</li>
-                                </ul>
-                            </div>
-                            <div class="line">}</div>
-                        </div>
-                        <div class="line">}</div>
-                    </div>
-
-                    <div class="projects-yota block indent">
-                        <div class="line">
-                            <span class="property project-name">
-                                <a target="_blank" href="https://www.yota.ru">Bank PRM System, at EPAM for Yota Bank, in Russia</a>
-                            </span> {
-                            <span class="comment">2012 - 2014</span>
-                        </div>
-                        <div class="indent">
-                            <div class="line">
-                                <span class="property">Role</span> {
-                                <span class="value">JS/Java developer</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Environment</span> {
-                                <span class="value">Java, Grails, jQuery, Tomcat, Oracle DB, JDBC</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Project description</span> {
-                            </div>
-                            <div class="line indent value">
-                                Online Bank PRM system with access to partners, payments, configuration of other payment
-                                systems in Bank environment.
-                            </div>
-                            <div class="line">}</div>
-
-                            <div class="line">
-                                <span class="property">Responsibilities</span> {
-                            </div>
-                            <div class="line indent">
-                                <ul class="value">
-                                    <li>Java Web and UI (Grails) development and prototyping</li>
-                                    <li>Data delivery scripts development using Perl and Bash</li>
-                                </ul>
-                            </div>
-                            <div class="line">}</div>
-                        </div>
-                        <div class="line">}</div>
-                    </div>
-
-                    <div class="projects-t3c block indent">
-                        <div class="line">
-                            <span class="property project-name">
-                                <a target="_blank" href="http://russretail.info/busines/200-o-tzs.html">Content Management System, T3C food retailer, in Russia</a>
-                            </span> {
-                            <span class="comment">2011 - 2012</span>
-                        </div>
-                        <div class="indent">
-                            <div class="line">
-                                <span class="property">Role</span> {
-                                <span class="value">JS/Java developer</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Environment</span> {
-                                <span class="value">Java, Tomcat, Alfresco ECM, MySQL, Lucene, jQuery, TeamCity</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Project description</span> {
-                            </div>
-                            <div class="line indent value">
-                                Document management system for the customer with multiple offices all over the country
-                                that automates decision-making process.
-                            </div>
-                            <div class="line">}</div>
-
-                            <div class="line">
-                                <span class="property">Responsibilities</span> {
-                            </div>
-                            <div class="line indent">
-                                <ul class="value">
-                                    <li>Java Web and UI development and prototyping</li>
-                                    <li>Server-side development including data delivering to UI and Lucene-based search
-                                        engine
-                                    </li>
-                                    <li>Communication with a customer for requirements gathering</li>
-                                </ul>
-                            </div>
-                            <div class="line">}</div>
-                        </div>
-                        <div class="line">}</div>
-                    </div>
-
-                    <div class="projects-web block indent">
-                        <div class="line">
-                            <span class="property project-name">Web Portals, multiple customers from Russia and the USA</span>
-                            {
-                            <span class="comment">2009 - 2011</span>
-                        </div>
-                        <div class="indent">
-                            <div class="line">
-                                <span class="property">Role</span> {
-                                <span class="value">JS &amp; PHP Developer with bigger focus on UI.</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Environment</span> {
-                                <span class="value">PHP, Java, jQuery, MySQL</span> }
-                            </div>
-                        </div>
-                        <div class="line">}</div>
-                    </div>
-
-                    <div class="projects-energy block last indent">
-                        <div class="line">
-                            <span class="property project-name">
-                                <a target="_blank"
-                                   href="http://www.zavodenergy.ru/">Part-time job (70%) while studying</a>
-                            </span> {
-                            <span class="comment">2006 - 2009</span>
-                        </div>
-                        <div class="indent">
-                            <div class="line">
-                                <span class="property">Role</span> {
-                                <span class="value">C++/C# developer</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Environment</span> {
-                                <span class="value">C++, C#</span> }
-                            </div>
-
-                            <div class="line">
-                                <span class="property">Project description</span> {
-                            </div>
-                            <div class="line indent value">
-                                Radio interception, analog-to-digital conversion, surveillance and monitoring systems.
-                            </div>
-                            <div class="line">}</div>
-                        </div>
-                        <div class="line">}</div>
-                    </div>
-
-                    <div class="line">}</div> <!--Projects &amp; Experience-->
+                    {% endfor %}
                 </div>
-
-                <span id="cv-link" class="comment">
-                    // With clickable links:
-                    <a href="https://azarakovskiy.github.io/">https://azarakovskiy.github.io</a>
-                </span>
+                <div class="line">}</div>
             </div>
-        </div>
 
+        </div>
         <span id="disclaimer" class="comment">
-                [ Last updated: Jan 2018 ] Optimized to print in latest Chrome but in case anything is shown wrong,
-                <a class="button center" href="/etc/Alexey_Zarakovskiy_CV.pdf">just download a PDF</a>
+                [ Last updated: Jan 2018 ] Optimized for latest Chrome for printing but in case anything is shown wrong,
+                <a class="button center" href="{{ site.data.cv.basics.pdf_url }}">just download a PDF</a>
             </span>
     </div>
 
