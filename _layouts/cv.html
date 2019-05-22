@@ -189,11 +189,23 @@
             content: "\2014\a0";
         }
 
+        ul.value li:only-child {
+            margin-left: 2mm;
+        }
+
+        ul.value li:only-child:before {
+            content: none;
+        }
+
         ul.value {
-            margin: 0 0 0 -2mm;
+            margin: 0;
             list-style: none inside;
             -webkit-padding-start: 0;
             -moz-padding-start: 0;
+        }
+
+        .projects ul.value {
+            margin-left: -2mm;
         }
 
         .wrapper .comment {
@@ -451,18 +463,48 @@
                     <div class="line">
                         <span class="property">Education</span> {
                     </div>
-                    {% for education in site.data.cv.education %}
                     <div class="indent">
-                        <div class="line value">
-                            {{education.studyType}}
-                            {{education.startDate}} - {{education.endDate}},
-                            {{education.location.city}}, {{education.location.country}}
-                        </div>
-                        <div class="line value">
-                            {{education.area}}, {{education.institution}}
-                        </div>
+                            <ul class="value">
+                                {% for education in site.data.cv.education %}
+                                <li>{{education.studyType}},
+                                    {% if education.startDate == education.endDate %}
+                                    {{education.endDate}},
+                                    {% else %}
+                                    {{education.startDate}} - {{education.endDate}},
+                                    {% endif %}
+                                    {{education.area}}
+
+                                    {% if education.institution | size > 0 %}
+                                    <div class="line value">
+                                        {{education.institution}},
+                                        {{education.location.city}}, {{education.location.country}}
+                                    </div>
+                                    {% endif %}
+                                </li>
+                                {% endfor %}
+                            </ul>
                     </div>
-                    {% endfor %}
+<!--                    <div class="indent">-->
+<!--                        <ul class="value">-->
+<!--                    {% for education in site.data.cv.education %}-->
+<!--                        <div class="line value">-->
+<!--                            {{education.studyType}},-->
+<!--                            {% if education.startDate == education.endDate %}-->
+<!--                                {{education.endDate}},-->
+<!--                            {% else %}-->
+<!--                                {{education.startDate}} - {{education.endDate}},-->
+<!--                            {% endif %}-->
+<!--                            {{education.area}}-->
+<!--                        </div>-->
+<!--                        {% if education.institution | size > 0 %}-->
+<!--                        <div class="line value">-->
+<!--                            {{education.institution}},-->
+<!--                            {{education.location.city}}, {{education.location.country}}-->
+<!--                        </div>-->
+                        {% endif %}
+<!--                    {% endfor %}-->
+<!--                        </ul>-->
+<!--                    </div>-->
                     <div class="line">}</div>
                 </div>
 
@@ -481,14 +523,14 @@
                                 {% else %}
                                     {{project.name}}
                                 {% endif %}
-                                  {% if project.employer || project.location %}
+                                  {% if project.employer or project.location %}
 
                                     <span class="comment">/*
                                     {% if project.employer %}
                                         {{project.employer}}
                                     {% endif %}
                                     {% if project.location %}
-                                        in {{project.location.country}}
+                                        in {{project.location.city}}
                                     {% endif %}
                                     */</span>
                                 {% endif %}
@@ -497,14 +539,16 @@
                                 {% if project.startDate != project.endDate %}- {{project.endDate}}{% endif %}</span>
                         </div>
                         <div class="indent">
+                            {% if project.roles | size > 0 %}
                             <div class="line">
                                 <span class="property">Roles</span> {
                                 <span class="value">{{project.roles | join: ', '}}</span> }
                             </div>
+                            {% endif %}
 
                             {% if project.keywords | size > 0 %}
                             <div class="line">
-                                <span class="property">Environment</span> {
+                                <span class="property">Keywords</span> {
                                 <span class="value">{{project.keywords | join: ', '}}</span> }
                             </div>
                             {% endif %}
@@ -521,7 +565,7 @@
 
                             {% if project.highlights | size > 0 %}
                             <div class="line">
-                                <span class="property">Responsibilities</span> {
+                                <span class="property">Highlights</span> {
                             </div>
                             <div class="line indent value">
                                 <ul class="value">
@@ -553,7 +597,7 @@
 
         </div>
         <span id="disclaimer" class="comment">
-                [ Last updated: Jan 2018 ] Optimized for latest Chrome for printing but in case anything is shown wrong,
+                [ Last updated: Jan 2018 ] Optimized to print on a latest Chrome. In case anything is shown wrong,
                 <a class="button center" href="{{ site.data.cv.basics.pdf_url }}">just download a PDF</a>
             </span>
     </div>

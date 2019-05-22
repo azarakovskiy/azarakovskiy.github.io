@@ -53,6 +53,17 @@
         "country": "Russia",
         "countryCode": "RU"
       }
+    },
+    {
+      "area": "UX design essentials",
+      "studyType": "Certificate",
+      "startDate": "2011",
+      "endDate": "2011",
+      "location": {
+        "city": "Saint Petersburg",
+        "country": "Russia",
+        "countryCode": "RU"
+      }
     }
   ],
   "skills": [
@@ -164,6 +175,33 @@
   ],
   "projects": [
     {
+      "name": "B2B marketplace for fashion",
+      "url": "https://www.fashiontrade.com/",
+      "roles": "Java developer",
+      "description": "Online trading platform for fashion brands and retailers.",
+      "startDate": "2018",
+      "endDate": "2019",
+      "keywords": [
+        "Java",
+        "JAX-RS",
+        "REST",
+        "Python",
+        "Docker",
+        "GKE",
+        "Elasticsearch"
+      ],
+      "highlights": [
+        "Develop CRM integration with built-in smartness to disambiguate incoming data without fixed structure against existing in the system",
+        "Build and support external and interval dev and integration tools"
+      ],
+      "employer": "fashionTrade",
+      "location": {
+        "city": "Amsterdam",
+        "country": "The Netherlands",
+        "countryCode": "NL"
+      }
+    },
+    {
       "name": "Digital eXperience Accelerator",
       "location": {
         "city": "Amsterdam",
@@ -172,20 +210,21 @@
       },
       "employer": "SDL",
       "roles": [
-        "Java developer"
+        "Java developer",
+        "later a team leader"
       ],
-      "description": "An open-source API wrapper for the complex enterprise CMS. The intention was to help developers building custom applications using the company's main product. Implemented in Java & .NET.",
+      "description": "An open-source community-driven API wrapper on top of the company's main product - complex enterprise CMS. Implemented in Java & .NET.",
       "highlights": [
-        "As a main Java developer, I work here in close relation with \".NET half\" in order to implement the same API in both technologies",
-        "Communication with customers and project community",
-        "Coach a junior Java developer"
+        "As a main Java developer, I worked here in close relation with \".NET half\" in order to implement the same API in both technologies."
       ],
       "keywords": [
         "Java",
         "Spring",
         "Maven",
         "Gradle",
-        "Jenkins"
+        "Jenkins",
+        "Tomcat",
+        "Open-source"
       ],
       "startDate": "2015",
       "endDate": "2018",
@@ -202,19 +241,21 @@
       "roles": [
         "Java developer"
       ],
-      "description": "The REST API that converts a weather forecast data to a prediction of productivity of wind turbines at requested time ranges.",
+      "description": "The REST API that converts weather forecast data to a prediction of productivity of wind turbines at requested time ranges.",
       "keywords": [
         "Java",
+        "PostgreSQL",
         "Hibernate",
         "Maven",
-        "Spring"
+        "Spring Boot",
+        "REST"
       ],
       "startDate": "summer 2015",
       "endDate": "summer 2015",
       "url": "https://www.meteogroup.com/"
     },
     {
-      "name": "Landing Page Builder",
+      "name": "Landing Page Builder Wizard",
       "location": {
         "city": "Krakow",
         "country": "Poland",
@@ -229,21 +270,20 @@
         "Java",
         "Spring",
         "jQuery",
+        "AngularJS",
         "Twitter Bootstrap",
-        "SQL",
-        "Hibernate"
+        "MySQL"
       ],
       "highlights": [
         "UI and UX development and design, Java REST API for this UI",
-        "Communication with customer & live-prototyping",
-        "Coaching of a junior JS/Java developer"
+        "Due to uncertainty in requirements, we'd been practicing live UI prototyping sessions with a customer with immediate feedback"
       ],
       "startDate": "2014",
       "endDate": "2015",
       "url": "https://advertising.paypal.com/"
     },
     {
-      "name": "Yota Bank CRM System",
+      "name": "Yota Bank CRM",
       "location": {
         "city": "Saint Petersburg",
         "country": "Russia",
@@ -260,7 +300,8 @@
         "jQuery",
         "Tomcat",
         "Oracle DB",
-        "JDBC"
+        "JDBC",
+        "Hibernate"
       ],
       "highlights": [
         "Java Web and UI (Grails) development and prototyping",
@@ -271,17 +312,17 @@
       "url": "https://www.yota.ru/"
     },
     {
-      "name": "Content Management System",
+      "name": "CMS for a food retailer",
       "location": {
         "city": "Saint Petersburg",
         "country": "Russia",
         "countryCode": "RU"
       },
-      "employer": "T3C retailer",
+      "employer": "T3C",
       "roles": [
         "Full-stack JS/Java developer"
       ],
-      "description": "Document management system for the customer with multiple offices all over the country that automates decision-making process.",
+      "description": "Content & document management system for the customer with multiple offices all over the country to automate decision-making process.",
       "keywords": [
         "Java",
         "Tomcat",
@@ -292,38 +333,26 @@
         "TeamCity"
       ],
       "highlights": [
-        "Java Web and backend and frontend development and prototyping",
-        "Custom search engine based on Lucene"
+        "Java backend and frontend development and prototyping."
       ],
       "startDate": "2011",
       "endDate": "2012",
       "url": "http://russretail.info/busines/200-o-tzs.html"
     },
     {
-      "name": "Misc web development",
-      "employer": "Russian and American customers",
-      "roles": [
-        "JS & PHP Developer with bigger focus on UI"
-      ],
+      "name": "Other less relevant experience",
       "keywords": [
         "PHP",
-        "Java",
+        "JavaScript",
         "jQuery",
-        "MySQL"
+        "C++",
+        "C#",
+        "MySQL",
+        "QA",
+        "Java"
       ],
-      "startDate": "2009",
+      "startDate": "2006 - 2009",
       "endDate": "2011"
-    },
-    {
-      "name": "Part-time job (70%) while studying",
-      "roles": [
-        "C++ & C# developer",
-        "QA engineer"
-      ],
-      "description": "Radio interception, surveillance and monitoring systems.",
-      "startDate": "2006",
-      "endDate": "2009",
-      "url": "http://zavodenergy.ru"
     }
   ]
 }
