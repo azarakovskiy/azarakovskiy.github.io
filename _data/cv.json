@@ -68,22 +68,35 @@
   ],
   "skills": [
     {
-      "name": "Java",
+      "name": "Languages",
       "keywords": [
-        "Spring",
+        "Java",
+        "Python",
+        "JavaScript",
         "Groovy",
-        "Grails",
-        "Tomcat"
+        "PowerShell",
+        "Shell"
       ]
     },
     {
-      "name": "Testing",
+      "name": "Java",
       "keywords": [
+        "Spring",
+        "JAX-RS",
+        "futures and streams",
         "jUnit",
-        "EasyMock",
         "Mockito",
-        "JMeter",
-        "Postman"
+        "Hibernate"
+      ]
+    },
+    {
+      "name": "Environment",
+      "keywords": [
+        "Kafka",
+        "Elasticsearch",
+        "Kubernetes",
+        "Google Cloud",
+        "Tomcat"
       ]
     },
     {
@@ -93,7 +106,6 @@
         "Gradle",
         "Git",
         "Docker",
-        "SVN",
         "Jenkins",
         "TeamCity"
       ]
@@ -101,43 +113,25 @@
     {
       "name": "Web",
       "keywords": [
+        "REST",
         "HTML",
+        "CSS",
         "JS",
         "jQuery",
-        "CSS",
-        "Twitter Bootstrap",
         "AngularJS"
-      ]
-    },
-    {
-      "name": "DBs",
-      "keywords": [
-        "Oracle",
-        "MySQL",
-        "JDBC",
-        "Hibernate"
       ]
     },
     {
       "name": "Other",
       "keywords": [
-        "PowerShell",
-        "PHP",
-        "C#",
+        "Postman",
+        "JMeter",
+        "SQL",
         "Jira",
-        "Windows",
-        "Linux",
         "UX",
-        "UML"
-      ]
-    },
-    {
-      "name": "Methodologies",
-      "keywords": [
-        "Scrum",
-        "Kanban",
-        "SAFe",
-        "RUP"
+        "UML",
+        "PHP",
+        "C#"
       ]
     }
   ],
