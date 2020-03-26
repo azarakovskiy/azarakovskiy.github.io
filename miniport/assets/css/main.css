@@ -2104,32 +2104,32 @@ input, select, textarea {
 		margin-bottom: 0;
 	}
 
-	#top {
+	#top, #top2, #top3, #top4 {
 		padding: 10em 0 10em 0;
 		text-align: left;
 	}
 
-		#top .image {
+		#top .image, #top2 .image, #top3 .image, #top4 .image  {
 			border-radius: 100%;
 			width: 20em;
 			height: 20em;
 			margin: 0;
 		}
 
-			#top .image img {
+			#top .image img, #top2 .image img, #top3 .image img ,#top4 .image img  {
 				border-radius: 100%;
 			}
 
-		#top h1 {
+		#top h1, #top2 h1,#top3 h1,#top4 h1 {
 			margin-top: 0.35em;
 		}
 
-		#top p {
+		#top p, #top2 p, #top4 p,#top4 p {
 			font-size: 1.5em;
 			line-height: 1.75em;
 		}
 
-			#top p a {
+			#top p a, #top2 p a,  #top3 p a,  #top4 p a {
 				color: inherit;
 			}
 
@@ -2207,11 +2207,11 @@ input, select, textarea {
 
 		/* Articles */
 
-			#top {
+			#top, #top2,#top3, #top4  {
 				padding: 8em 0;
 			}
 
-				#top .image {
+				#top .image, #top2 .image, #top3 .image, #top4 .image {
 					width: 24em;
 					height: 24em;
 					margin: 0;
@@ -2225,12 +2225,12 @@ input, select, textarea {
 
 		/* Articles */
 
-			#top {
+			#top, #top2,#top3, #top4 {
 				text-align: center;
 				padding: 5em 0;
 			}
 
-				#top .image {
+				#top .image, #top2 .image,#top3 .image, #top4 .image {
 					margin: 0 auto 2em auto;
 				}
 
@@ -2405,17 +2405,17 @@ input, select, textarea {
 
 		/* Articles */
 
-			#top {
+			#top, #top2,#top3, #top4 {
 				padding: 3em 0;
 			}
 
-				#top .image {
+				#top .image, #top2 .image,#top3 .image, #top4 .image  {
 					width: 15em;
 					height: 15em;
 					margin-bottom: 0;
 				}
 
-				#top p {
+				#top p, #top2 p,#top3 p, #top4 p  {
 					font-size: 1em;
 				}
 
