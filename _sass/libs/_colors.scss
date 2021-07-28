@@ -1,0 +1,30 @@
+// Misc.
+	$misc: (
+		bg-light:	#fdf6e3,// url("images/bg_light.jpg") bottom left,
+		bg-dark:	#012a36,// url("images/bg_light.jpg") bottom left,
+
+		bg-width:	1500px
+	);
+
+// Palette.
+	$palette: (
+		bg-light:	#fdf6e3,
+		bg-dark:	#012a36,
+
+		fg-light:	#657b83, // base00
+		fg-dark:	#839496, // base0
+
+		nav-icon: (
+			hover-bg-light:	rgba(101, 123, 131, 0.175),
+			hover-bg-dark:	rgba(131, 148, 150, 0.175),
+
+			hover-fg-light:	#657b83,
+			hover-fg-dark:	#839496,
+
+			active-bg-light:    rgba(101, 123, 131, 0.35),
+			active-bg-dark:     rgba(131, 148, 150, 0.35),
+
+			active-fg-light:	#657b83,
+			active-fg-dark: 	#839496
+		)
+	);

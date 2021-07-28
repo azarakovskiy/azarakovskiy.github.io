@@ -1,0 +1,35 @@
+---
+title: Alexey Zarakovskiy
+type: profile
+description: Software developer, traveller and just a nice guy.
+---
+<header id="header">
+    <h1>{{ site.data.me.name }} {{ site.data.me.lastname }}</h1>
+    <p>
+        {% for r in site.data.me.roles %}
+            {% unless forloop.index0 == 0 %}
+                &nbsp;&bull;&nbsp;
+            {% endunless %}
+
+            {% if r.url %}
+<!--                <a href="{{ r.url }}">-->
+                    {{ r.name }}
+<!--                </a>-->
+            {% else %}
+                {{ r.name }}
+            {% endif %}
+        {% endfor %}
+    </p>
+    <nav>
+        <ul>
+            {% for l in site.data.me.links %}
+            <li><a id="social-link-{{ forloop.index0 }}" target="_blank" href="#" class="icon {{ l.icon }}"><span class="label">{{ l.name }}</span></a></li>
+            <script>
+                setTimeout(function(){
+                    document.getElementById("social-link-{{ forloop.index0 }}").setAttribute("href", {{ l.url }});
+                }, 2000);
+            </script>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

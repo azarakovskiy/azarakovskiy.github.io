@@ -1,0 +1,18 @@
+name: Alexey
+lastname: Zarakovskiy
+links:
+  - icon: brands fa-github
+    name: Github
+    url: "'h'+'t'+'t'+'p'+'s'+':'+'/'+'/'+'g'+'i'+'t'+'h'+'u'+'b'+'.'+'c'+'o'+'m'+'/'+'a'+'z'+'a'+'r'+'a'+'k'+'o'+'v'+'s'+'k'+'i'+'y'"
+  - icon: solid fa-envelope
+    name: Email
+    url: "'m'+'a'+'i'+'l'+'t'+'o'+':'+'w'+'o'+'r'+'k'+'@'+'a'+'z'+'a'+'r'+'a'+'k'+'o'+'v'+'s'+'k'+'i'+'y'+'.'+'c'+'o'+'m'"
+  - icon: brands fa-linkedin
+    name: LinkedIn
+    url: "'h'+'t'+'t'+'p'+'s'+':'+'/'+'/'+'w'+'w'+'w'+'.'+'l'+'i'+'n'+'k'+'e'+'d'+'i'+'n'+'.'+'c'+'o'+'m'+'/'+'i'+'n'+'/'+'a'+'l'+'e'+'x'+'e'+'y'+'z'+'a'+'r'+'a'+'k'+'o'+'v'+'s'+'k'+'i'+'y'"
+roles:
+  - name: Software Engineer
+    url: /resume
+  - name: Traveller
+    url: /travel
+  - name: Just a nice guy
