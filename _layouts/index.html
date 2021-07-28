@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <meta property="author" content="{{ site.data.me.name }} {{ site.data.me.lastname }}"/>
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="{{ page.type }}"/>
+    <meta property="og:url" content="{{ page.url | absolute_url }}"/>
+    {% if page.description %}
+    <meta property="og:description" content="{{ page.description }}"/>
+    {% endif %}
+    {% if page.image_preview %}
+    <meta property="og:image" content="{{ page.image_preview }}"/>
+    {% endif %}
+
+    <link rel="stylesheet" href="/assets/css/styles.css"/>
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="is-preload">
+<div id="wrapper">
+    <div id="bg"></div>
+    <div id="overlay"></div>
+    <div id="main">
+
+        {{ content }}
+
+    </div>
+</div>
+
+<script>
+    window.onload = function() { document.body.classList.remove('is-preload'); }
+    window.ontouchmove = function() { return false; }
+    window.onorientationchange = function() { document.body.scrollTop = 0; }
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114254477-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114254477-1');
+</script>
+</body>
+</html>

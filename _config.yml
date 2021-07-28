@@ -1,0 +1,6 @@
+url: "https://azarakovskiy.com"
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "index"
