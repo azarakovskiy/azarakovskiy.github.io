@@ -12,7 +12,6 @@ links:
     url: "'h'+'t'+'t'+'p'+'s'+':'+'/'+'/'+'w'+'w'+'w'+'.'+'l'+'i'+'n'+'k'+'e'+'d'+'i'+'n'+'.'+'c'+'o'+'m'+'/'+'i'+'n'+'/'+'a'+'l'+'e'+'x'+'e'+'y'+'z'+'a'+'r'+'a'+'k'+'o'+'v'+'s'+'k'+'i'+'y'"
 roles:
   - name: Software Engineer
-    url: /resume
   - name: Traveller
-    url: /travel
+    url: /travels
   - name: Just a nice guy
