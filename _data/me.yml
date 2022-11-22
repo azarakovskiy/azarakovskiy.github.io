@@ -9,9 +9,10 @@ links:
     url: "'m'+'a'+'i'+'l'+'t'+'o'+':'+'w'+'e'+'b'+'@'+'a'+'z'+'a'+'r'+'a'+'k'+'o'+'v'+'s'+'k'+'i'+'y'+'.'+'c'+'o'+'m'"
   - icon: brands fa-linkedin
     name: LinkedIn
-    url: "'h'+'t'+'t'+'p'+'s'+':'+'/'+'/'+'w'+'w'+'w'+'.'+'l'+'i'+'n'+'k'+'e'+'d'+'i'+'n'+'.'+'c'+'o'+'m'+'/'+'i'+'n'+'/'+'a'+'l'+'e'+'x'+'e'+'y'+'z'+'a'+'r'+'a'+'k'+'o'+'v'+'s'+'k'+'i'+'y'"
+    url: "'h'+'t'+'t'+'p'+'s'+':'+'/'+'/'+'w'+'w'+'w'+'.'+'l'+'i'+'n'+'k'+'e'+'d'+'i'+'n'+'.'+'c'+'o'+'m'+'/'+'i'+'n'+'/'+'a'+'z'+'a'+'r'+'a'+'k'+'o'+'v'+'s'+'k'+'i'+'y'"
 roles:
-  - name: Software Engineer
+  - name: Senior Software Engineer
+    url: /resume
   - name: Traveller
-    url: /travels
+    url: /travel
   - name: Just a nice guy
