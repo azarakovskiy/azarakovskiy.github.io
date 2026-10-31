@@ -177,6 +177,7 @@ def render_page(title: str, description: str, header: str, main: str, depth: int
     <title>{escape(title)} | Alexey Zarakovskiy</title>
     <link rel="icon" type="image/svg+xml" href="{"../" * depth}favicon.svg" />
     <link rel="stylesheet" href="{"../" * depth}styles.css" />
+    <script src="{"../" * depth}theme.js"></script>
     <script src="{"../" * depth}contact-links.js" defer></script>
   </head>
   <body class="blog-page" id="top">

@@ -1,7 +1,7 @@
 # Portfolio
 
-A static portfolio and blog built with HTML, CSS, and a small native JavaScript
-contact-link decoder. This repository, `azarakovskiy/azarakovskiy.github.io`,
+A static portfolio and blog built with HTML, CSS, and native JavaScript for
+color themes and contact links. This repository, `azarakovskiy/azarakovskiy.github.io`,
 serves the portfolio at <https://azarakovskiy.com/> directly from the root
 `index.html`, without a redirect. The résumé stays in `resume/`, and the blog
 lives at `/blog/`.
@@ -25,6 +25,24 @@ Copy edits must preserve facts in the approved draft, including figures, their
 qualifiers, team ownership, technical decisions, and named clients. Apply its
 merge and removal instructions without reintroducing older content.
 Omit leading "a" and "an" from titles and short subtitles; keep body prose grammatical.
+
+## Color themes
+
+The portfolio and blog use [Gruvbox Medium Light and Dark](https://github.com/morhetz/gruvbox).
+`styles.css` owns both palettes. The synchronous `theme.js` runs before page
+content paints and follows the browser's color preference until a mode is chosen.
+The header's sun/moon button saves that choice as `localStorage["site-theme"]`
+(`light` or `dark`) across pages and reloads. If storage is unavailable, the
+button still works for the current page. Without JavaScript, the site stays light.
+The résumé has its own stylesheet, loads no theme script, and stays light.
+
+The sticky header paints a one-pixel background gap below its border so a
+scrolling section rule cannot join it into a thicker band.
+
+The comparison prototype is archived on branch `prototype/dark-mode-palettes`
+at commit `36e52df`. It records the Medium selection and keeps the six
+Light/Dark × Soft/Medium/Hard comparisons outside production.
+
 
 ## Contact links
 
@@ -220,6 +238,13 @@ first published source restores the preview and navigation, and removing the
 last source hides them again. Confirm that the root opens the portfolio directly
 and that the résumé's print button and `?download=true` path include decoded
 contact details. Confirm that the former static PDF URL is no longer served.
+
+Check automatic Light/Dark changes with no saved `site-theme`, then use the
+header button and confirm the choice survives reloads and navigation between
+the portfolio, listing, and nested articles. Check keyboard use, blocked storage,
+and a cold dark-mode load. Scroll section rules past the sticky header border
+at normal and fractional pixel scales; its separator must not become a thick
+band. Open and print the résumé while the site is dark; its colors stay light.
 
 After editing or deleting a source, rerun the publisher and repeat the checks.
 Keep a published filename stable: renaming it changes its URL and does not

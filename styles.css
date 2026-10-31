@@ -1,15 +1,33 @@
 :root {
   color-scheme: light;
-  --ink: #11181c;
-  --ink-soft: #3c4752;
-  --accent: #059669;
-  --accent-dark: #065f46;
-  --mint: #edf8f2;
-  --rule: #dce3e2;
+  --ink: #3c3836;
+  --ink-soft: #504945;
+  --accent: #79740e;
+  --accent-dark: #076678;
+  --mint: #ebdbb2;
+  --rule: #d5c4a1;
+  --page: #fbf1c7;
+  --surface: #f2e5bc;
+  --button-ink: var(--page);
+  --button-hover: #3c3836;
+  --selection: var(--rule);
   --sans: "Helvetica Neue", "Liberation Sans", Arial, sans-serif;
   --mono: "Liberation Mono", "Courier New", monospace;
   --page-width: 1160px;
   --page-gutter: 48px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #ebdbb2;
+  --ink-soft: #bdae93;
+  --accent: #b8bb26;
+  --accent-dark: #8ec07c;
+  --mint: #3c3836;
+  --rule: #504945;
+  --page: #282828;
+  --surface: #32302f;
+  --button-hover: #b8bb26;
 }
 
 *,
@@ -24,7 +42,7 @@ html {
 
 body {
   margin: 0;
-  background: #fff;
+  background: var(--page);
   color: var(--ink);
   font: 16px / 1.65 var(--sans);
   -webkit-text-size-adjust: 100%;
@@ -50,7 +68,7 @@ a:hover {
 }
 
 ::selection {
-  background: #d1fae5;
+  background: var(--selection);
   color: var(--ink);
 }
 
@@ -66,7 +84,7 @@ a:hover {
   top: 12px;
   left: 12px;
   padding: 10px 16px;
-  background: #fff;
+  background: var(--page);
   border: 1px solid var(--accent-dark);
   transform: translateY(-160%);
 }
@@ -79,8 +97,10 @@ a:hover {
   position: sticky;
   z-index: 10;
   top: 0;
-  background: #fff;
+  background: var(--page);
   border-bottom: 1px solid var(--rule);
+  /* Keep scrolling rules from joining the sticky header border. */
+  box-shadow: 0 1px 0 var(--page);
 }
 
 .header-section {
@@ -88,7 +108,7 @@ a:hover {
   bottom: 0;
   left: calc(max(var(--page-gutter), (100% - var(--page-width)) / 2) - 12px);
   padding-inline: 12px;
-  background: #fff;
+  background: var(--page);
   color: var(--accent-dark);
   font: 400 11px / 1.5 var(--mono);
   white-space: nowrap;
@@ -224,18 +244,51 @@ a:hover {
   stroke: none;
 }
 
+.theme-toggle {
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--accent-dark);
+  font: inherit;
+  cursor: pointer;
+}
+
+.theme-toggle:not([hidden]) {
+  display: inline-flex;
+}
+
+.theme-toggle:hover {
+  background: var(--mint);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .contact-nav .contact-button {
   min-width: 64px;
   padding-inline: 14px;
   border: 1px solid var(--accent-dark);
   border-radius: 4px;
   background: var(--accent-dark);
-  color: #fff;
+  color: var(--button-ink);
 }
 
 .contact-nav .contact-button:hover {
-  background: #047857;
-  border-color: #047857;
+  background: var(--button-hover);
+  border-color: var(--button-hover);
 }
 
 .intro {
@@ -303,7 +356,7 @@ a:hover {
 }
 
 .availability[data-status="unavailable"] .availability-dot {
-  background: #9aa4ad;
+  background: var(--ink-soft);
 }
 
 .stack {
@@ -371,7 +424,7 @@ a:hover {
 
 .projects-section {
   padding-block: 48px;
-  background: #f5f8f7;
+  background: var(--surface);
 }
 
 
@@ -791,7 +844,7 @@ a:hover {
 
 
   .customer-group {
-    background: #fff;
+    background: var(--page);
     border: 1px solid var(--rule);
     border-radius: 6px;
   }
@@ -832,6 +885,12 @@ a:hover {
 
   :root {
     --page-gutter: 16px;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    right: var(--page-gutter);
+    bottom: 0;
   }
 
   .header-inner {
@@ -1118,7 +1177,7 @@ a:hover {
 .personal-section {
   position: relative;
   padding-block: 48px;
-  background: #fff;
+  background: var(--page);
 }
 
 .personal-ledger article {
@@ -1207,7 +1266,7 @@ a:hover {
     overflow: hidden;
     border: 1px solid var(--rule);
     border-radius: 6px;
-    background: #fff;
+    background: var(--page);
   }
 
   .inline-role-meta {
