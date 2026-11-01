@@ -10,8 +10,9 @@ The blog publisher uses only the Python standard library and requires Python 3.9
 or newer. Generated pages are committed, so the deployed site needs neither
 Python nor a build service.
 
-`favicon.svg` is the shared black-on-white AZ circle icon for the portfolio,
-résumé, and generated blog pages.
+`favicon.svg` uses the same lowercase `az/` paths as the header for the portfolio,
+résumé, and generated blog pages. Its ink follows the browser's light or dark
+color preference so it stays visible without a background.
 
 ## Portfolio layout
 
@@ -25,6 +26,14 @@ Copy edits must preserve facts in the approved draft, including figures, their
 qualifiers, team ownership, technical decisions, and named clients. Apply its
 merge and removal instructions without reintroducing older content.
 Omit leading "a" and "an" from titles and short subtitles; keep body prose grammatical.
+
+The portfolio and blog share a lowercase `az/` SVG header mark at every screen
+size. Its paths preserve the original mobile Helvetica Neue Bold glyphs at 22px
+with -0.375px letter spacing, without requiring that font on the device. The SVG
+fits the visible paths tightly and aligns with the main title's left edge, while
+the link keeps a 44px minimum target and the full name as its accessible label.
+The mark stays the same size on scroll and does not show a role. Section routes
+still appear at the sticky header border as their sections scroll into view.
 
 ## Color themes
 
