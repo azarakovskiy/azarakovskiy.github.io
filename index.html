@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Alexey Zarakovskiy, Senior software engineer. Selected work in backend services, platform engineering, live migrations, full-stack development, agent skills and automated workflows." />
+    <meta name="description" content="Alexey Zarakovskiy: AI engineering, infrastructure and automation consulting. Building agent workflows that take features from design to review-ready pull requests." />
     <meta name="color-scheme" content="light" />
-    <title>Alexey Zarakovskiy | Senior software engineer</title>
+    <title>Alexey Zarakovskiy | AI engineering &amp; infrastructure consultant</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=az" />
     <link rel="stylesheet" href="styles.css" />
     <script src="theme.js"></script>
@@ -27,6 +27,7 @@
           </svg>
         </a>
         <nav class="primary-nav" aria-label="Sections">
+          <a href="ai-workflow/">AI Workflow</a>
           <a href="#projects">Projects</a>
           <a href="#personal">Personal</a>
           <a href="blog/" hidden>Blog</a>
@@ -50,9 +51,10 @@
       <section class="intro container" id="top" aria-labelledby="name">
         <div class="intro-grid">
           <div class="intro-copy">
-            <h1 class="intro-role" id="name">Senior software engineer</h1>
-            <p class="intro-description">I build backend services and frontends, evolve platforms and migrate live systems, from the first decisions to production, automating my work with smart use of AI.</p>
-            <p class="availability" data-status="unavailable"><span class="availability-dot" aria-hidden="true"></span>Not available</p>
+            <h1 class="intro-role" id="name">AI engineering &amp; infrastructure consultant</h1>
+            <p class="intro-description">Building backend systems, AI infrastructure and tooling.</p>
+            <p class="intro-description">Helping teams integrate AI-assisted development to accelerate delivery, improve consistency, and increase engineering efficiency.</p>
+            <p class="availability" data-status="available"><span class="availability-dot" aria-hidden="true"></span>Available</p>
           </div>
           <div class="stack" id="stack">
             <h2 class="route">/stack</h2>
@@ -61,6 +63,7 @@
               <div class="skill-group"><h3>Data &amp; messaging</h3><p>Kafka, PostgreSQL, DynamoDB</p></div>
               <div class="skill-group"><h3>Platform</h3><p>AWS, Kubernetes, Docker, IaC</p></div>
               <div class="skill-group"><h3>Web</h3><p>TypeScript, React</p></div>
+              <div class="skill-group skill-group-ai"><h3>AI</h3><p>OMP, Herdr, Hermes, Copilot, Claude, Cursor, Codex</p></div>
             </div>
           </div>
         </div>
@@ -80,7 +83,7 @@
                   <dl class="customer-work-context" aria-label="Employer information">
                     <div><dt><svg aria-hidden="true"><use href="#icon-pin"></use></svg><span>Location</span></dt><dd>Amsterdam</dd></div>
                   </dl>
-                  <p class="customer-summary">Senior Software Engineer</p>
+                  <p class="customer-summary">AI Infrastructure &amp; Process Development Consultant</p>
                   <details class="company-links">
                     <summary class="company-link-trigger"><svg aria-hidden="true"><use href="#icon-globe"></use></svg>Visit</summary>
                     <div class="customer-link-hint" id="prosus-site-links">
@@ -94,11 +97,13 @@
                   <header class="project-heading">
                     <div class="project-meta"><span>AI platform engineering</span></div>
                     <h4 class="project-title" id="toqan-harness-title">Toqan</h4>
-                    <p class="project-summary">Toqan is an AI workspace that builds applications from a single prompt. It can search the web, analyze data, build apps and dashboards, and create finished presentations and reports. It remembers context and runs tasks on a schedule. I develop its Go-based AI harness, which connects AI models to external tools, runs multi-step agent workflows and deploys the results.</p>
+                    <p class="project-summary">Toqan AI platform for business automation.</p>
                   </header>
                   <div class="project-body">
                     <div class="project-details">
-                      <section class="project-detail"><h5>My ownership</h5><p>I deliver features and improve shared AI workflows and context handling.</p></section>
+                      <section class="project-detail"><h5>My ownership</h5><p>I develop Toqan’s Go-based AI platform - building infra, connecting models to external tools, orchestrating multi-step agent workflows.<br>
+                        Implemented agent workflows and context handling.<br>
+                        Handled MCP OAuth integrations.</p></section>
                     </div>
                     <footer class="project-footer">
                       <div class="project-tech"><strong>Built with</strong><ul class="tags"><li>Go</li><li>React</li><li>Agents</li><li>LLM</li><li>SQS</li><li>AWS</li><li>Datadog</li></ul></div>
@@ -108,26 +113,40 @@
               </div>
             </section>
 
-            <div class="current-entry" id="toptal">
-              <article class="inline-role">
-                <div class="inline-role-meta">
-                  <div class="inline-role-heading">
-                    <h3>Toptal</h3>
-                    <p class="work-in-progress"><span aria-hidden="true"></span>Current</p>
-                  </div>
-                  <p>Apr 2026 – present</p>
-                  <div class="inline-role-context">
-                    <span><svg aria-hidden="true"><use href="#icon-pin"></use></svg>Remote</span>
-                    <a href="https://www.toptal.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Toptal website"><svg aria-hidden="true"><use href="#icon-globe"></use></svg>Visit</a>
-                  </div>
+            <section class="customer-group" id="toptal" aria-labelledby="toptal-title">
+              <header class="customer-heading">
+                <div class="customer-identity">
+                  <h3 class="customer-title" id="toptal-title">Toptal</h3>
+                  <p class="customer-summary">Client engagements through the Toptal platform.</p>
+                  <p class="work-in-progress"><span aria-hidden="true"></span>Current</p>
+                  <p class="customer-period"><time datetime="2026-04">Apr 2026</time> to present</p>
+                  <dl class="customer-work-context" aria-label="Engagement information">
+                    <div><dt><svg aria-hidden="true"><use href="#icon-pin"></use></svg><span>Location</span></dt><dd>Remote</dd></div>
+                  </dl>
+                  <p class="customer-summary">Engineering Consultant &amp; Team Lead</p>
+                  <details class="company-links">
+                    <summary class="company-link-trigger"><svg aria-hidden="true"><use href="#icon-globe"></use></svg>Visit</summary>
+                    <div class="customer-link-hint" id="toptal-site-links">
+                      <nav class="link-tree" aria-label="Toptal links"><a class="link-tree-root" href="https://www.toptal.com/" target="_blank" rel="noopener noreferrer">toptal.com ↗</a></nav>
+                    </div>
+                  </details>
                 </div>
-                <div>
-                  <p class="inline-role-title">Freelance Senior Software Engineer</p>
-                  <p class="inline-role-summary">Backend engineering across projects for clients through the Toptal platform.</p>
-                  <p class="inline-role-tech">Go</p>
-                </div>
-              </article>
-            </div>
+              </header>
+              <div class="customer-projects">
+                <article class="project" id="toptal-consulting" aria-labelledby="toptal-consulting-title">
+                  <header class="project-heading">
+                    <div class="project-meta"><span>Consulting &amp; technical leadership</span></div>
+                    <h4 class="project-title" id="toptal-consulting-title">Backend, AI &amp; infrastructure</h4>
+                    <p class="project-summary">I consult on backend and AI engineering, develop infrastructure and automation, and lead engineering teams for clients through Toptal.</p>
+                  </header>
+                  <div class="project-body">
+                    <footer class="project-footer">
+                      <div class="project-tech"><strong>Built with</strong><ul class="tags"><li>Go</li><li>OMP</li><li>Herdr</li></ul></div>
+                    </footer>
+                  </div>
+                </article>
+              </div>
+            </section>
 
             <section class="customer-group" id="personio" aria-labelledby="personio-title">
               <header class="customer-heading">
