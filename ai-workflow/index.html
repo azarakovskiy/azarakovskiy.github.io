@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A guided AI development pipeline with shared engineering standards, quality checkpoints and consistent workflows from design to pull request." />
+    <meta name="color-scheme" content="light" />
+    <title>AI Workflow | Alexey Zarakovskiy</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg?v=az" />
+    <link rel="stylesheet" href="../styles.css?v=19106aa0229a" />
+    <script src="../theme.js"></script>
+    <script src="../contact-links.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-brand" href="../index.html#top" aria-label="Alexey Zarakovskiy">
+          <svg class="brand-mark" width="30.996" height="16.434" viewBox="0.704 -16.082 30.996 16.434" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M1.056 -7.876Q1.122 -8.976 1.606 -9.702Q2.09 -10.428 2.838 -10.868Q3.586 -11.308 4.521 -11.495Q5.456 -11.682 6.402 -11.682Q7.26 -11.682 8.14 -11.561Q9.02 -11.44 9.746 -11.088Q10.472 -10.736 10.934 -10.109Q11.396 -9.482 11.396 -8.448L11.396 -2.53Q11.396 -1.76 11.484 -1.056Q11.572 -0.352 11.792 0L8.624 0Q8.536 -0.264 8.481 -0.539Q8.426 -0.814 8.404 -1.1Q7.656 -0.33 6.644 -0.022Q5.632 0.286 4.576 0.286Q3.762 0.286 3.058 0.088Q2.354 -0.11 1.826 -0.528Q1.298 -0.946 1.001 -1.584Q0.704 -2.222 0.704 -3.102Q0.704 -4.07 1.045 -4.697Q1.386 -5.324 1.925 -5.698Q2.464 -6.072 3.157 -6.259Q3.85 -6.446 4.554 -6.556Q5.258 -6.666 5.94 -6.732Q6.622 -6.798 7.15 -6.93Q7.678 -7.062 7.986 -7.315Q8.294 -7.568 8.272 -8.052Q8.272 -8.558 8.107 -8.855Q7.942 -9.152 7.667 -9.317Q7.392 -9.482 7.029 -9.537Q6.666 -9.592 6.248 -9.592Q5.324 -9.592 4.796 -9.196Q4.268 -8.8 4.18 -7.876ZM8.272 -5.566Q8.074 -5.39 7.777 -5.291Q7.48 -5.192 7.139 -5.126Q6.798 -5.06 6.424 -5.016Q6.05 -4.972 5.676 -4.906Q5.324 -4.84 4.983 -4.73Q4.642 -4.62 4.389 -4.433Q4.136 -4.246 3.982 -3.96Q3.828 -3.674 3.828 -3.234Q3.828 -2.816 3.982 -2.53Q4.136 -2.244 4.4 -2.079Q4.664 -1.914 5.016 -1.848Q5.368 -1.782 5.742 -1.782Q6.666 -1.782 7.172 -2.09Q7.678 -2.398 7.92 -2.827Q8.162 -3.256 8.217 -3.696Q8.272 -4.136 8.272 -4.4Z" />
+            <path d="M12.737 -2.354L12.737 0L23.187 0L23.187 -2.354L16.851 -2.354L22.769 -9.02L22.769 -11.374L13.177 -11.374L13.177 -9.02L18.655 -9.02Z" />
+            <path d="M29.192 -16.082L23.076 0.352L25.562 0.352L31.7 -16.082Z" />
+          </svg>
+        </a>
+        <nav class="primary-nav" aria-label="Sections">
+          <a href="../index.html#projects">Projects</a>
+          <a href="./" aria-current="page">AI Workflow</a>
+          <a href="../blog/" hidden>Blog</a>
+        </nav>
+        <a class="resume-link" href="../resume/index.html">Résumé</a>
+        <nav class="contact-nav" aria-label="Social links and contact">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" hidden></button>
+          <a class="social-link" href="../index.html#contact" data-contact="github" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.7-1.6 6.7-7.3A5.7 5.7 0 0 0 19.2 3a5.3 5.3 0 0 0-.1-3S17.9-.1 15 1.8a13.4 13.4 0 0 0-7 0C5.1-.1 3.9.3 3.9.3A5.3 5.3 0 0 0 3.8 3a5.7 5.7 0 0 0-1.5 4.2c0 5.7 3.4 6.9 6.7 7.3A4.8 4.8 0 0 0 8 18v4"/><path d="M8 19c-3 .9-3-1.4-4-2"/></svg>
+          </a>
+          <a class="social-link" href="../index.html#contact" data-contact="linkedin" aria-label="LinkedIn">
+            <svg class="linkedin-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33 0-3.04-1.85-3.04s-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg>
+          </a>
+          <a class="contact-button" href="../index.html#contact" data-contact="email">Get in touch</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" class="container workflow-main">
+      <div class="workflow-copy">
+        <h1 class="intro-role">Scaling AI-assisted development shouldn't mean every engineer has to build their own workflow.</h1>
+        <p class="intro-description">When engineers are left to configure their own tools, practices, and workflows, AI adoption becomes fragmented and difficult to scale across teams.</p>
+        <p class="intro-description">We're building a guided AI development pipeline that takes engineers from design to pull request, with shared engineering standards, best practices, and quality checkpoints built into the process.</p>
+        <p class="intro-description">Less time configuring tools. More consistency across teams. A repeatable way to make AI-assisted development part of everyday engineering.</p>
+        <p class="intro-description">Trying to scale AI-assisted development across your engineering organization?</p>
+        <p class="intro-description">Let's talk about what's possible.</p>
+        <div class="contact-actions">
+          <a class="contact-button" href="../index.html#contact" data-contact="email">Get in touch</a>
+        </div>
+      </div>
+      <ol class="workflow-diagram" aria-label="AI development workflow">
+        <li><span>Design</span></li>
+        <li><span>Planning</span></li>
+        <li><span>Implementation</span></li>
+        <li><span>Review</span></li>
+        <li><span>Retrospective</span></li>
+      </ol>
+    </main>
+  </body>
+</html>

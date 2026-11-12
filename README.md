@@ -3,8 +3,8 @@
 A static portfolio and blog built with HTML, CSS, and native JavaScript for
 color themes and contact links. This repository, `azarakovskiy/azarakovskiy.github.io`,
 serves the portfolio at <https://azarakovskiy.com/> directly from the root
-`index.html`, without a redirect. The résumé stays in `resume/`, and the blog
-lives at `/blog/`.
+`index.html`, without a redirect. AI Workflow lives at `/ai-workflow/`, the
+résumé stays in `resume/`, and the blog lives at `/blog/`.
 
 The blog publisher uses only the Python standard library and requires Python 3.9
 or newer. Generated pages are committed, so the deployed site needs neither
@@ -14,6 +14,34 @@ Python nor a build service.
 résumé, and generated blog pages. Its ink follows the browser's light or dark
 color preference so it stays visible without a background.
 
+## AI Workflow
+
+`ai-workflow/index.html` is the AI adoption page. Its menu link appears
+after Projects in the shared header. It reuses the site's typography, responsive
+header, light/dark themes, and contact links; the opening sentence is its heading.
+A Get in touch button below the copy matches the portfolio's primary contact
+action: 52px minimum height, 24px horizontal padding, and semibold text.
+It aligns to the text column's right edge on desktop and fills that column at
+widths of 880px and smaller. The interaction-revealed email link uses the
+portfolio contact section as fallback.
+An accessible ordered-list diagram shows Design → Planning → Implementation →
+Review → Retrospective beside the text. Flexible connectors align its first and
+last stages with the text column, including the contact button, without stretching
+the labels. It follows the shared theme colors and stacks below the copy at
+widths of 880px and smaller.
+
+The portfolio and AI Workflow stylesheet URLs include the first 12 characters
+of the SHA-256 hash of `styles.css`. Refresh both `?v=` values after stylesheet
+changes (use `shasum -a 256 styles.css`) so cached styles cannot break the
+portfolio layout or render the workflow diagram as a plain numbered list.
+
+Edit its main content directly. The publisher refreshes only its site header from
+the root `index.html`, including relative navigation, the current-page marker,
+and Blog visibility. Rerun the publisher after shared navigation changes; it
+preserves the page's authored content.
+The Personal section remains on the portfolio but is not linked in the shared menu.
+
+
 ## Portfolio layout
 
 Keep employer and project entries in their current timeline order, with matching
@@ -21,11 +49,34 @@ horizontal rules between employers. Use the sections specified in the approved
 draft. Prose fills its content column and
 uses native `text-wrap: pretty` to reduce single-word last lines. Headings use
 `balance` where needed. The AI tools group spans the full stack-grid width.
+It lists OMP, Herdr, Hermes, Copilot, Claude, Cursor, and Codex.
+
+LinkedIn, GitHub, and Résumé links sit beneath "Let's talk software" in the
+bottom contact section. The Get in touch button is the primary action: larger
+and aligned to the right edge on desktop, full-width beneath the links at
+widths of 880px and smaller. It preserves the interaction-revealed email behavior.
 
 Copy edits must preserve facts in the approved draft, including figures, their
 qualifiers, team ownership, technical decisions, and named clients. Apply its
 merge and removal instructions without reintroducing older content.
 Omit leading "a" and "an" from titles and short subtitles; keep body prose grammatical.
+
+The introduction positions the work as AI engineering and infrastructure
+consulting. Its two paragraphs cover backend systems, AI infrastructure and
+tooling, and helping teams integrate AI-assisted development. Preserve paragraph
+spacing. Keep the root page title and search description aligned.
+
+The Prosus/Toqan entry uses the role title "AI Infrastructure & Process Development
+Consultant" and ownership copy covering Go-based AI platform and infrastructure
+development, implemented agent workflows and context handling, and handled MCP
+OAuth integrations. Keep this ownership copy in one paragraph with each sentence
+starting on a new line, without paragraph gaps.
+
+Toptal uses the same company/project layout as the other recent engagements,
+including the role title "Engineering Consultant & Team Lead", shared project
+typography, metadata, and technology tags. Its description covers backend and
+AI engineering, infrastructure, automation, and team leadership for clients
+through Toptal. Keep the compact layout for earlier experience only.
 
 The portfolio and blog share a lowercase `az/` SVG header mark at every screen
 size. Its paths preserve the original mobile Helvetica Neue Bold glyphs at 22px
@@ -217,6 +268,8 @@ python3 -m http.server 4187 --bind 127.0.0.1
 The publisher creates `blog/index.html` and `blog/<slug>/index.html`, updates
 the region between `blog-preview:start` and `blog-preview:end` in the root
 `index.html`, and sets or removes `hidden` on the header's Blog link.
+It also refreshes the header in `ai-workflow/index.html` when that page exists,
+without changing its main content.
 Keep the preview markers and the `href="blog/"` header anchor intact.
 The listing shows every post, newest date first, with ascending slug order for
 matching dates. The portfolio shows the latest three. Each article has a
@@ -230,6 +283,7 @@ generated-file marker.
 Preview these pages after generation:
 
 - Portfolio: <http://127.0.0.1:4187/> opens directly, without a redirect.
+- AI Workflow: <http://127.0.0.1:4187/ai-workflow/>
 - Résumé and Print / Save as PDF: <http://127.0.0.1:4187/resume/index.html>
 - Listing: <http://127.0.0.1:4187/blog/>
 - Each article directly: `http://127.0.0.1:4187/blog/<slug>/`
@@ -264,11 +318,11 @@ assets and unrelated files alone.
 Do not edit generated blog HTML or the generated portfolio preview by hand.
 Edit article sources instead. The publisher reads the shared site header from
 the root `index.html`, so rerun it after changing header navigation. It manages
-the Blog link's visibility; other portfolio content and `resume/` are outside
-its output.
+the Blog link's visibility and the AI Workflow header; other portfolio content,
+AI Workflow content, and `resume/` are outside its output.
 
 Commit the sources, publisher and tests, documentation, any article assets,
-updated root `index.html`, and generated `blog/` output together.
+updated root `index.html`, AI Workflow page, and generated `blog/` output together.
 
 ## Deploy to GitHub Pages
 

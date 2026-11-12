@@ -141,7 +141,7 @@ def render_preview(posts: list[Post]) -> str:
     )
 
 
-def render_header(header: str, depth: int) -> str:
+def render_header(header: str, depth: int, *, page: str = "blog/") -> str:
     prefix = "../" * depth
 
     def rebase_link(match: re.Match) -> str:
@@ -149,9 +149,10 @@ def render_header(header: str, depth: int) -> str:
         href = re.search(r'\bhref="([^"]*)"', tag)
         if href:
             target = href[1]
-            if target == "blog/":
-                replacement = 'href="./" aria-current="page"' if depth == 1 else 'href="../"'
-                tag = tag.replace(href[0], replacement, 1)
+            if target == page and depth == 1:
+                tag = tag.replace(href[0], 'href="./" aria-current="page"', 1)
+            elif target == "blog/" and page == "blog/":
+                tag = tag.replace(href[0], 'href="../"', 1)
             elif target.startswith("#"):
                 tag = tag.replace(href[0], f'href="{prefix}index.html{target}"', 1)
             elif not urlsplit(target).scheme and not target.startswith("//"):
@@ -252,6 +253,18 @@ def publish(root: Path) -> None:
         before + PREVIEW_START + "\n" + indent(render_preview(posts), "      ")
         + "\n      " + PREVIEW_END + after
     )
+    workflow_path = root / "ai-workflow" / "index.html"
+    updated_workflow = None
+    if workflow_path.exists():
+        workflow = workflow_path.read_text(encoding="utf-8")
+        workflow_header = re.search(r'<header class="site-header">.*?</header>', workflow, re.DOTALL)
+        if not workflow_header:
+            raise ValueError('ai-workflow/index.html: missing <header class="site-header">')
+        updated_workflow = (
+            workflow[:workflow_header.start()]
+            + render_header(header, 1, page="ai-workflow/")
+            + workflow[workflow_header.end():]
+        )
     blog = root / "blog"
     pages = {
         blog / "index.html": render_page(
@@ -272,6 +285,8 @@ def publish(root: Path) -> None:
     for path, content in pages.items():
         write_page(path, content)
     write_page(homepage_path, updated_homepage)
+    if updated_workflow is not None:
+        write_page(workflow_path, updated_workflow)
     for path in stale:
         path.unlink()
         try:

@@ -15,7 +15,7 @@ HOMEPAGE = '''<!doctype html>
 <html lang="en"><head><title>Portfolio</title></head><body>
 <header class="site-header">
   <a class="site-brand" href="#top">Alexey Zarakovskiy</a>
-  <nav class="primary-nav"><a href="#projects">Projects</a><a href="#personal">Personal</a><a href="blog/">Blog</a></nav>
+  <nav class="primary-nav"><a href="#projects">Projects</a><a href="ai-workflow/">AI Workflow</a><a href="#personal">Personal</a><a href="blog/">Blog</a></nav>
   <a class="resume-link" href="resume/">Résumé</a>
   <a href="#contact" data-contact="github">GitHub</a>
   <a href="#contact" data-contact="email">Contact</a>
@@ -82,10 +82,10 @@ class PublishBlogTests(unittest.TestCase):
                          HOMEPAGE.partition(PREVIEW_START)[0])
         self.assertEqual(home.partition(PREVIEW_END)[2], HOMEPAGE.partition(PREVIEW_END)[2])
         for page, blog_href, non_blog_hrefs in (
-            (home, "blog/", ["#top", "#projects", "#personal", "resume/",
+            (home, "blog/", ["#top", "ai-workflow/", "#projects", "#personal", "resume/",
                              "#contact", "#contact"]),
-            (listing, "./", ["../index.html#top", "../index.html#projects",
-                             "../index.html#personal", "../resume/",
+            (listing, "./", ["../index.html#top", "../ai-workflow/",
+                             "../index.html#projects", "../index.html#personal", "../resume/",
                              "../index.html#contact", "../index.html#contact"]),
         ):
             header = re.search(r'<header class="site-header">.*?</header>', page, re.DOTALL)[0]
@@ -93,8 +93,10 @@ class PublishBlogTests(unittest.TestCase):
             blog_links = [link for link in links if link["href"] == blog_href]
             self.assertEqual(len(blog_links), 1)
             self.assertIn("hidden", blog_links[0])
-            self.assertEqual([link["href"] for link in links if link["href"] != blog_href],
-                             non_blog_hrefs)
+            self.assertCountEqual(
+                [link["href"] for link in links if link["href"] != blog_href],
+                non_blog_hrefs,
+            )
             self.assertFalse(self.post_links(page))
         before = self.snapshot()
         publish(self.root)
@@ -142,6 +144,7 @@ class PublishBlogTests(unittest.TestCase):
                                    self.read(path), re.DOTALL)[0]
                 links = Links(header).links
                 hrefs = [link["href"] for link in links]
+                self.assertIn(f"{prefix}ai-workflow/", hrefs)
                 self.assertEqual(
                     [href for href in hrefs if "#" in href],
                     [f"{prefix}index.html#{section}"
@@ -152,6 +155,36 @@ class PublishBlogTests(unittest.TestCase):
                     [{"href": f"{prefix}index.html#contact", "data-contact": contact}
                      for contact in ("github", "email")],
                 )
+
+    def test_workflow_navigation_tracks_publication_without_changing_content(self):
+        workflow = self.root / "ai-workflow" / "index.html"
+        workflow.parent.mkdir()
+        content = '<main id="main"><h1>Workflow</h1><p>Authored content.</p></main></body></html>'
+        workflow.write_text(
+            '<!doctype html><html><body><header class="site-header">Old navigation</header>'
+            + content, encoding="utf-8",
+        )
+        for has_posts in (False, True, False):
+            with self.subTest(has_posts=has_posts):
+                if has_posts:
+                    self.post("note")
+                else:
+                    (self.root / "posts" / "note.html").unlink(missing_ok=True)
+                publish(self.root)
+                page = self.read("ai-workflow/index.html")
+                self.assertEqual(page.partition("</header>")[2], content)
+                links = Links(page).links
+                self.assertCountEqual([link["href"] for link in links], [
+                    "../index.html#top", "./", "../index.html#projects",
+                    "../index.html#personal", "../blog/", "../resume/",
+                    "../index.html#contact", "../index.html#contact",
+                ])
+                self.assertEqual(
+                    [link["href"] for link in links if link.get("aria-current") == "page"],
+                    ["./"],
+                )
+                blog_link = next(link for link in links if link["href"] == "../blog/")
+                self.assertEqual("hidden" in blog_link, not has_posts)
 
     def test_listing_orders_all_posts_and_homepage_limits_to_latest_three(self):
         for slug, published in (("older", "2025-06-01"), ("beta", "2026-10-18"),
