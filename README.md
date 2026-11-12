@@ -21,9 +21,16 @@ before Projects in the shared header. It reuses the site's typography, responsiv
 header, light/dark themes, and contact links; the opening sentence is its heading.
 A Get in touch button below the copy uses the shared contact-button style and
 interaction-revealed email link, with the portfolio contact section as fallback.
-An accessible inline SVG shows Design → Planning → Implementation → Review →
-Retrospective beside the text. It follows the shared theme colors and stacks
-below the copy at widths of 880px and smaller.
+An accessible ordered-list diagram shows Design → Planning → Implementation →
+Review → Retrospective beside the text. Flexible connectors align its first and
+last stages with the text column, including the contact button, without stretching
+the labels. It follows the shared theme colors and stacks below the copy at
+widths of 880px and smaller.
+
+The page's stylesheet URL includes the first 12 characters of the SHA-256 hash
+of `styles.css`. Refresh its `?v=` value after stylesheet changes (use
+`shasum -a 256 styles.css`) so cached SVG-era styles cannot render the diagram
+as a plain numbered list.
 
 Edit its main content directly. The publisher refreshes only its site header from
 the root `index.html`, including relative navigation, the current-page marker,
