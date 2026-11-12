@@ -17,25 +17,30 @@ color preference so it stays visible without a background.
 ## AI Workflow
 
 `ai-workflow/index.html` is the AI adoption page. Its menu link appears
-before Projects in the shared header. It reuses the site's typography, responsive
+after Projects in the shared header. It reuses the site's typography, responsive
 header, light/dark themes, and contact links; the opening sentence is its heading.
-A Get in touch button below the copy uses the shared contact-button style and
-interaction-revealed email link, with the portfolio contact section as fallback.
+A Get in touch button below the copy matches the portfolio's primary contact
+action: 52px minimum height, 24px horizontal padding, and semibold text.
+It aligns to the text column's right edge on desktop and fills that column at
+widths of 880px and smaller. The interaction-revealed email link uses the
+portfolio contact section as fallback.
 An accessible ordered-list diagram shows Design → Planning → Implementation →
 Review → Retrospective beside the text. Flexible connectors align its first and
 last stages with the text column, including the contact button, without stretching
 the labels. It follows the shared theme colors and stacks below the copy at
 widths of 880px and smaller.
 
-The page's stylesheet URL includes the first 12 characters of the SHA-256 hash
-of `styles.css`. Refresh its `?v=` value after stylesheet changes (use
-`shasum -a 256 styles.css`) so cached SVG-era styles cannot render the diagram
-as a plain numbered list.
+The portfolio and AI Workflow stylesheet URLs include the first 12 characters
+of the SHA-256 hash of `styles.css`. Refresh both `?v=` values after stylesheet
+changes (use `shasum -a 256 styles.css`) so cached styles cannot break the
+portfolio layout or render the workflow diagram as a plain numbered list.
 
 Edit its main content directly. The publisher refreshes only its site header from
 the root `index.html`, including relative navigation, the current-page marker,
 and Blog visibility. Rerun the publisher after shared navigation changes; it
 preserves the page's authored content.
+The Personal section remains on the portfolio but is not linked in the shared menu.
+
 
 ## Portfolio layout
 
@@ -45,6 +50,11 @@ draft. Prose fills its content column and
 uses native `text-wrap: pretty` to reduce single-word last lines. Headings use
 `balance` where needed. The AI tools group spans the full stack-grid width.
 It lists OMP, Herdr, Hermes, Copilot, Claude, Cursor, and Codex.
+
+LinkedIn, GitHub, and Résumé links sit beneath "Let's talk software" in the
+bottom contact section. The Get in touch button is the primary action: larger
+and aligned to the right edge on desktop, full-width beneath the links at
+widths of 880px and smaller. It preserves the interaction-revealed email behavior.
 
 Copy edits must preserve facts in the approved draft, including figures, their
 qualifiers, team ownership, technical decisions, and named clients. Apply its

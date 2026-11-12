@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="light" />
     <title>Alexey Zarakovskiy | AI engineering &amp; infrastructure consultant</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=az" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=19106aa0229a" />
     <script src="theme.js"></script>
     <script src="contact-links.js" defer></script>
   </head>
@@ -27,9 +27,8 @@
           </svg>
         </a>
         <nav class="primary-nav" aria-label="Sections">
-          <a href="ai-workflow/">AI Workflow</a>
           <a href="#projects">Projects</a>
-          <a href="#personal">Personal</a>
+          <a href="ai-workflow/">AI Workflow</a>
           <a href="blog/" hidden>Blog</a>
         </nav>
         <a class="resume-link" href="resume/index.html">Résumé</a>
@@ -424,10 +423,12 @@
       <div class="container">
         <h2 class="route section-route" id="contact-title">/contact</h2>
         <div class="contact-grid">
-          <div><h3>Let's talk software.</h3></div>
+          <div>
+            <h3>Let's talk software.</h3>
+            <nav class="profile-links" aria-label="More ways to connect"><a href="#contact" data-contact="linkedin">LinkedIn</a><a href="#contact" data-contact="github">GitHub</a><a href="resume/index.html">Résumé</a></nav>
+          </div>
           <div class="contact-actions">
-            <a class="contact-email" href="#contact" data-contact="email" data-contact-text>Email</a>
-            <nav class="footer-links" aria-label="More ways to connect"><a href="#contact" data-contact="linkedin">LinkedIn</a><a href="#contact" data-contact="github">GitHub</a><a href="resume/index.html">Résumé</a></nav>
+            <a class="contact-button" href="#contact" data-contact="email">Get in touch</a>
             <noscript><p>Enable JavaScript to use email and personal-profile links.</p></noscript>
           </div>
         </div>

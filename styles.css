@@ -285,6 +285,7 @@ a:hover {
   gap: 48px 64px;
 }
 
+
 .intro-role {
   margin-bottom: 12px;
   font-size: 32px;
@@ -327,9 +328,8 @@ a:hover {
   max-width: 70ch;
 }
 
-.workflow-copy > .contact-button {
+.workflow-copy > .contact-actions {
   margin-top: 24px;
-  font-size: 13px;
 }
 
 .workflow-diagram {
@@ -796,7 +796,7 @@ a:hover {
   }
 }
 
-.footer-links a,
+.profile-links a,
 .footer-note a {
   display: inline-flex;
   align-items: center;
@@ -816,23 +816,25 @@ a:hover {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
   gap: 48px;
 }
 
-
-.contact-email {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  max-width: 100%;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  overflow-wrap: anywhere;
+.contact-actions {
+  justify-self: end;
+  text-align: right;
 }
 
-.footer-links {
+.contact-actions .contact-button {
+  min-height: 52px;
+  padding-inline: 24px;
+  font-weight: 600;
+}
+
+
+
+.profile-links {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 24px;
@@ -900,6 +902,14 @@ a:hover {
   .workflow-main {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
+  }
+
+  .contact-actions {
+    justify-self: stretch;
+  }
+
+  .contact-actions .contact-button {
+    width: 100%;
   }
 
 
@@ -1057,9 +1067,6 @@ a:hover {
 
 
 
-  .contact-email {
-    font-size: 21px;
-  }
 
   .footer-note {
     margin-top: 32px;

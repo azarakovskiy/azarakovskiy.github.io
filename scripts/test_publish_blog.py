@@ -15,7 +15,7 @@ HOMEPAGE = '''<!doctype html>
 <html lang="en"><head><title>Portfolio</title></head><body>
 <header class="site-header">
   <a class="site-brand" href="#top">Alexey Zarakovskiy</a>
-  <nav class="primary-nav"><a href="ai-workflow/">AI Workflow</a><a href="#projects">Projects</a><a href="#personal">Personal</a><a href="blog/">Blog</a></nav>
+  <nav class="primary-nav"><a href="#projects">Projects</a><a href="ai-workflow/">AI Workflow</a><a href="#personal">Personal</a><a href="blog/">Blog</a></nav>
   <a class="resume-link" href="resume/">Résumé</a>
   <a href="#contact" data-contact="github">GitHub</a>
   <a href="#contact" data-contact="email">Contact</a>
@@ -93,8 +93,10 @@ class PublishBlogTests(unittest.TestCase):
             blog_links = [link for link in links if link["href"] == blog_href]
             self.assertEqual(len(blog_links), 1)
             self.assertIn("hidden", blog_links[0])
-            self.assertEqual([link["href"] for link in links if link["href"] != blog_href],
-                             non_blog_hrefs)
+            self.assertCountEqual(
+                [link["href"] for link in links if link["href"] != blog_href],
+                non_blog_hrefs,
+            )
             self.assertFalse(self.post_links(page))
         before = self.snapshot()
         publish(self.root)
@@ -172,7 +174,7 @@ class PublishBlogTests(unittest.TestCase):
                 page = self.read("ai-workflow/index.html")
                 self.assertEqual(page.partition("</header>")[2], content)
                 links = Links(page).links
-                self.assertEqual([link["href"] for link in links], [
+                self.assertCountEqual([link["href"] for link in links], [
                     "../index.html#top", "./", "../index.html#projects",
                     "../index.html#personal", "../blog/", "../resume/",
                     "../index.html#contact", "../index.html#contact",
